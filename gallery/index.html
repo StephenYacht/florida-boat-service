@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browse SN Yacht Services' project gallery — custom marine dash panels, electronics installations, marine audio systems, and full helm transformations. South Florida's premier marine electronics installer. Call (754) 333-0479.">
+<meta property="og:title" content="Project Gallery | SN Yacht Services | South Florida Marine Electronics">
+<meta property="og:description" content="See our work — custom CNC dash panels, marine electronics installations, audio systems, and full helm transformations across South Florida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.floridaboatservice.com/gallery">
+<title>Project Gallery | SN Yacht Services | Marine Electronics South Florida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --off-black: #111214;
+    --dark: #161a1e;
+    --card-bg: #1a1e24;
+    --border: rgba(255,255,255,0.08);
+    --red: #cc1c1c;
+    --red-bright: #e02020;
+    --white: #ffffff;
+    --off-white: #f0ede8;
+    --muted: #8a8f96;
+    --light: #c8cdd4;
+    --navy: #0d1520;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 72px;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+  }
+  .nav-logo img { height: 38px; width: auto; }
+  .nav-logo span { color: var(--red-bright); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--red-bright); }
+  .nav-links a.active { color: var(--red-bright); }
+  .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 10px 22px; }
+  .nav-cta:hover { background: var(--red-bright) !important; color: var(--white) !important; }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    padding: 100px 4rem 0;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--red-bright); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--navy);
+    padding: 2.5rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 1.2rem;
+  }
+  .page-hero h1 em { color: var(--red-bright); font-style: normal; }
+  .page-hero p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--light);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* ── CAROUSEL ── */
+  .carousel-section {
+    padding: 5rem 4rem 4rem;
+    background: var(--black);
+  }
+
+  .carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .slide-counter {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .slide-counter span { color: var(--white); }
+
+  /* main carousel */
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid var(--border);
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+  .carousel-slide {
+    min-width: 100%;
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--card-bg);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .carousel-slide:hover img { transform: scale(1.02); }
+
+  /* placeholder */
+  .slide-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--card-bg);
+  }
+  .slide-placeholder-icon { font-size: 4rem; opacity: 0.15; }
+  .slide-placeholder-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* caption overlay */
+  .slide-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 2.5rem 2.5rem 1.8rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.72));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .carousel-slide:hover .slide-caption { opacity: 1; }
+  .caption-category {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 4px;
+  }
+  .caption-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .caption-detail {
+    font-size: 0.82rem;
+    color: var(--light);
+    margin-top: 4px;
+  }
+
+  /* arrows */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(10,10,10,0.65);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    color: var(--white);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    backdrop-filter: blur(8px);
+  }
+  .carousel-btn:hover { background: var(--red); border-color: var(--red); }
+  .carousel-btn.prev { left: 1.5rem; }
+  .carousel-btn.next { right: 1.5rem; }
+
+  /* progress bar */
+  .carousel-progress {
+    height: 2px;
+    background: var(--border);
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-progress-bar {
+    height: 100%;
+    background: var(--red);
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+  /* dots */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .dot.active {
+    background: var(--red);
+    transform: scale(1.5);
+  }
+  .dot:hover { background: var(--light); }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--red);
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .cta-band-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.05;
+  }
+  .cta-band-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-top: 0.5rem;
+    max-width: 500px;
+  }
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    padding: 16px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: background 0.2s;
+  }
+  .btn-white:hover { background: var(--off-white); }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-inner {
+    position: relative;
+    width: 90vw;
+    max-width: 1200px;
+  }
+  .lightbox-img-wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--card-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lightbox-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .lightbox-caption {
+    padding: 1.2rem 1.5rem;
+    background: var(--off-black);
+    border-top: 0.5px solid var(--border);
+  }
+  .lightbox-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .lightbox-meta { font-size: 0.8rem; color: var(--muted); margin-top: 3px; }
+  .lightbox-close {
+    position: absolute;
+    top: -3rem; right: 0;
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .lightbox-close:hover { color: var(--red-bright); }
+  .lightbox-nav {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    transform: translateY(-50%);
+    background: rgba(10,10,10,0.7);
+    border: 0.5px solid var(--border);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 10;
+  }
+  .lightbox-nav:hover { background: var(--red); }
+  .lightbox-nav.prev { left: -4rem; }
+  .lightbox-nav.next { right: -4rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--off-black);
+    border-top: 0.5px solid var(--border);
+    padding: 4rem 4rem 2rem;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .footer-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .footer-contact-line { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 300; color: var(--light); margin-bottom: 6px; }
+  .footer-contact-line a { color: var(--light); text-decoration: none; }
+  .footer-contact-line a:hover { color: var(--red-bright); }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.6rem; }
+  .footer-links a { font-size: 0.85rem; font-weight: 300; color: var(--light); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--red-bright); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-legal { font-size: 0.78rem; font-weight: 300; color: var(--muted); }
+  .footer-legal a { color: var(--muted); text-decoration: none; }
+  .footer-legal a:hover { color: var(--red-bright); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/logo.png" alt="SN Yacht Services" onerror="this.style.display='none'">
+    SN <span>Yacht</span> Services
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/gallery" class="active">Gallery</a></li>
+    <li><a href="/brands">Brands</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog">Resources</a></li>
+    <li><a href="/#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="/">Home</a>
+  <span style="color:var(--border);">/</span>
+  <span style="color:var(--light);">Project Gallery</span>
+</div>
+
+<!-- ── HERO ── -->
+<div class="page-hero">
+  <div class="hero-eyebrow">Our Work</div>
+  <h1>The Work Speaks<br>for <em>Itself.</em></h1>
+  <p>Custom dash panels, electronics installations, marine audio systems, and complete helm transformations — built right here in South Florida. New photos added as projects are completed.</p>
+</div>
+
+<!-- ── CAROUSEL ── -->
+<section class="carousel-section">
+  <div class="carousel-header">
+    <div style="font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright);">Project Gallery</div>
+    <div class="slide-counter">
+      <span id="current-num">1</span> / <span id="total-num">1</span>
+    </div>
+  </div>
+
+  <div class="carousel-wrapper" id="carousel-wrapper">
+    <div class="carousel-track" id="carousel-track">
+
+      <!-- ═══════════════════════════════════════════════════
+           TO ADD A PHOTO: replace the <div class="slide-placeholder">
+           block inside any slide with:
+           <img src="YOUR_IMAGE_URL" alt="Description of photo">
+
+           TO ADD A NEW SLIDE: copy one full <div class="carousel-slide">
+           block and paste it before the closing </div> of carousel-track.
+           The carousel automatically adjusts for however many slides exist.
+      ════════════════════════════════════════════════════ -->
+
+      <div class="carousel-slide" onclick="openLightbox(0)">
+        <div class="slide-placeholder">
+          <span class="slide-placeholder-icon">📷</span>
+          <span class="slide-placeholder-label">Your photo here</span>
+        </div>
+        <div class="slide-caption">
+          <div class="caption-category">Custom Panel</div>
+          <div class="caption-title">Center Console Helm Panel</div>
+          <div class="caption-detail">Cast acrylic · Backlit switches · Boca Raton</div>
+        </div>
+      </div>
+
+      <div class="carousel-slide" onclick="openLightbox(1)">
+        <div class="slide-placeholder">
+          <span class="slide-placeholder-icon">📷</span>
+          <span class="slide-placeholder-label">Your photo here</span>
+        </div>
+        <div class="slide-caption">
+          <div class="caption-category">Electronics</div>
+          <div class="caption-title">Garmin GPSMAP Installation</div>
+          <div class="caption-detail">NMEA 2000 integrated · Fort Lauderdale</div>
+        </div>
+      </div>
+
+      <div class="carousel-slide" onclick="openLightbox(2)">
+        <div class="slide-placeholder">
+          <span class="slide-placeholder-icon">📷</span>
+          <span class="slide-placeholder-label">Your photo here</span>
+        </div>
+        <div class="slide-caption">
+          <div class="caption-category">Marine Audio</div>
+          <div class="caption-title">JL Audio Speaker Build</div>
+          <div class="caption-detail">M6 Series · Center console · Miami</div>
+        </div>
+      </div>
+
+      <div class="carousel-slide" onclick="openLightbox(3)">
+        <div class="slide-placeholder">
+          <span class="slide-placeholder-icon">📷</span>
+          <span class="slide-placeholder-label">Your photo here</span>
+        </div>
+        <div class="slide-caption">
+          <div class="caption-category">Full Helm Build</div>
+          <div class="caption-title">Complete Helm Transformation</div>
+          <div class="caption-detail">Panel · Electronics · Audio · Palm Beach</div>
+        </div>
+      </div>
+
+      <div class="carousel-slide" onclick="openLightbox(4)">
+        <div class="slide-placeholder">
+          <span class="slide-placeholder-icon">📷</span>
+          <span class="slide-placeholder-label">Your photo here</span>
+        </div>
+        <div class="slide-caption">
+          <div class="caption-category">Electrical</div>
+          <div class="caption-title">Custom Wire Harness</div>
+          <div class="caption-detail">ABYC compliant · Marine-grade wire</div>
+        </div>
+      </div>
+
+    </div><!-- end track -->
+
+    <button class="carousel-btn prev" onclick="move(-1)" aria-label="Previous">&#8592;</button>
+    <button class="carousel-btn next" onclick="move(1)" aria-label="Next">&#8594;</button>
+  </div><!-- end wrapper -->
+
+  <div class="carousel-progress"><div class="carousel-progress-bar" id="progress-bar"></div></div>
+  <div class="carousel-dots" id="carousel-dots"></div>
+
+</section>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-nav prev" onclick="lbMove(-1)">&#8592;</button>
+    <button class="lightbox-nav next" onclick="lbMove(1)">&#8594;</button>
+    <div id="lightbox-content"></div>
+    <div class="lightbox-caption">
+      <div class="lightbox-title" id="lb-title">Project Photo</div>
+      <div class="lightbox-meta" id="lb-meta">SN Yacht Services — South Florida</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <div>
+    <h2 class="cta-band-title">Want Your Boat in This Gallery?</h2>
+    <p class="cta-band-sub">Every build starts with a conversation — and ends with work you'll be proud to show off.</p>
+  </div>
+  <a href="tel:7543330479" class="btn-white">📞 (754) 333-0479</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="footer-tagline">Tailored Tech, Precision Crafted</p>
+      <div class="footer-contact-line">📍 <span>130 NW 20th St, Boca Raton, FL 33431</span></div>
+      <div class="footer-contact-line">📞 <a href="tel:7543330479">(754) 333-0479</a></div>
+      <div class="footer-contact-line">✉️ <a href="mailto:info@snyacht.com">info@snyacht.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="/custom-panels">Custom Dash Panels</a></li>
+        <li><a href="/electronics">Electronics Installation</a></li>
+        <li><a href="/audio">Marine Audio</a></li>
+        <li><a href="/navigation">Autopilot &amp; Navigation</a></li>
+        <li><a href="/electrical">Electrical Repair</a></li>
+        <li><a href="/mobile">Mobile Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/gallery">Project Gallery</a></li>
+        <li><a href="/brands">Brands We Carry</a></li>
+        <li><a href="/blog">Resources &amp; Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="/service-area/boca-raton">Boca Raton</a></li>
+        <li><a href="/service-area/fort-lauderdale">Fort Lauderdale</a></li>
+        <li><a href="/service-area/miami">Miami</a></li>
+        <li><a href="/service-area/palm-beach">Palm Beach</a></li>
+        <li><a href="/service-area/deerfield-beach">Deerfield Beach</a></li>
+        <li><a href="/service-area/pompano-beach">Pompano Beach</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">&copy; 2026 SN Yacht Services, LLC. All rights reserved. | <a href="/privacy">Privacy Policy</a></p>
+    <p class="footer-legal">Marine electronics installation gallery — Boca Raton, South Florida</p>
+  </div>
+</footer>
+
+<script>
+  const track = document.getElementById('carousel-track');
+  const dotsEl = document.getElementById('carousel-dots');
+  const progressBar = document.getElementById('progress-bar');
+
+  let current = 0;
+  let autoTimer = null;
+  let progressTimer = null;
+  const INTERVAL = 5000; // ms between auto-advances
+
+  // count slides dynamically
+  const slides = track.querySelectorAll('.carousel-slide');
+  const total = slides.length;
+  document.getElementById('total-num').textContent = total;
+
+  // build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+    dotsEl.appendChild(dot);
+  });
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    document.getElementById('current-num').textContent = current + 1;
+    dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    resetProgress();
+  }
+
+  function move(dir) { goTo(current + dir); resetAuto(); }
+
+  // progress bar animation
+  function resetProgress() {
+    clearInterval(progressTimer);
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    setTimeout(() => {
+      progressBar.style.transition = 'width ' + INTERVAL + 'ms linear';
+      progressBar.style.width = '100%';
+    }, 20);
+  }
+
+  // auto advance
+  function startAuto() {
+    autoTimer = setInterval(() => goTo(current + 1), INTERVAL);
+  }
+  function resetAuto() {
+    clearInterval(autoTimer);
+    startAuto();
+  }
+
+  // pause on hover
+  const wrapper = document.getElementById('carousel-wrapper');
+  wrapper.addEventListener('mouseenter', () => {
+    clearInterval(autoTimer);
+    clearInterval(progressTimer);
+    progressBar.style.transition = 'none';
+  });
+  wrapper.addEventListener('mouseleave', () => {
+    resetAuto();
+    resetProgress();
+  });
+
+  // touch/swipe support
+  let touchStartX = 0;
+  wrapper.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  wrapper.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { move(diff > 0 ? 1 : -1); }
+  });
+
+  // keyboard arrows
+  document.addEventListener('keydown', e => {
+    if (document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') move(-1);
+    if (e.key === 'ArrowRight') move(1);
+  });
+
+  // ── Lightbox
+  let lbIndex = 0;
+
+  function openLightbox(index) {
+    lbIndex = index;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    updateLightbox();
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOnBg(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+  function lbMove(dir) {
+    lbIndex = (lbIndex + dir + total) % total;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    const slide = slides[lbIndex];
+    const img = slide.querySelector('img');
+    const contentEl = document.getElementById('lightbox-content');
+    const title = slide.querySelector('.caption-title');
+    const cat = slide.querySelector('.caption-category');
+    const detail = slide.querySelector('.caption-detail');
+
+    if (img) {
+      contentEl.innerHTML = '<div class="lightbox-img-wrap"><img src="' + img.src + '" alt="' + (img.alt || '') + '"></div>';
+    } else {
+      contentEl.innerHTML = '<div class="lightbox-placeholder"><span style="font-size:3rem;opacity:0.15;">📷</span><span style="font-family:\'Barlow Condensed\',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Photo Coming Soon</span></div>';
+    }
+
+    document.getElementById('lb-title').textContent = title ? title.textContent : 'Project Photo';
+    document.getElementById('lb-meta').textContent = (cat ? cat.textContent + ' — ' : '') + 'SN Yacht Services' + (detail ? ' — ' + detail.textContent : '');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbMove(-1);
+    if (e.key === 'ArrowRight') lbMove(1);
+  });
+
+  // ── Nav scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 60 ? 'rgba(10,10,10,0.99)' : 'rgba(10,10,10,0.95)';
+  });
+
+  // kick everything off
+  startAuto();
+  resetProgress();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Marine electronics guides, how-to articles, and expert tips from SN Yacht Services — South Florida's certified marine electronics installer. Garmin, Simrad, Raymarine, JL Audio, Starlink, sonar, autopilot, and more.">
+<meta name="keywords" content="marine electronics guide South Florida, how to install Garmin chartplotter, forward facing sonar guide, Starlink boat installation guide, marine audio installation tips, custom boat panel guide, NMEA 2000 network guide, autopilot installation guide Florida, marine electronics blog, boat electronics tips South Florida">
+<meta property="og:title" content="Marine Electronics Resources & Blog | SN Yacht Services | South Florida">
+<meta property="og:description" content="Expert marine electronics guides, installation tips, and how-to articles from a certified Garmin, Airmar & NMEA installer with 10+ years in South Florida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.floridaboatservice.com/blog">
+<title>Marine Electronics Resources & Blog | SN Yacht Services | South Florida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --off-black: #111214;
+    --dark: #161a1e;
+    --card-bg: #1a1e24;
+    --border: rgba(255,255,255,0.08);
+    --red: #cc1c1c;
+    --red-bright: #e02020;
+    --red-muted: rgba(204,28,28,0.15);
+    --white: #ffffff;
+    --off-white: #f0ede8;
+    --muted: #8a8f96;
+    --light: #c8cdd4;
+    --navy: #0d1520;
+    --navy-mid: #111d2e;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 72px;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+  }
+
+  .nav-logo img { height: 38px; width: auto; }
+  .nav-logo span { color: var(--red-bright); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--red-bright); }
+  .nav-links a.active { color: var(--red-bright); }
+  .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 10px 22px; }
+  .nav-cta:hover { background: var(--red-bright) !important; }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    padding: 100px 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--navy);
+  }
+
+  .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--red-bright); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--navy);
+    padding: 2.5rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 85% 40%, rgba(204,28,28,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--red-bright);
+  }
+
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 5.5vw, 4.8rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-hero h1 em { color: var(--red-bright); font-style: normal; }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--light);
+    line-height: 1.8;
+    max-width: 540px;
+    margin-bottom: 2rem;
+  }
+
+  /* author card */
+  .author-card {
+    background: var(--card-bg);
+    border: 0.5px solid var(--border);
+    border-left: 2px solid var(--red);
+    padding: 2rem;
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+  }
+
+  .author-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--red-muted);
+    border: 0.5px solid rgba(204,28,28,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 3px;
+  }
+
+  .author-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 8px;
+  }
+
+  .author-creds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .author-cred {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: rgba(255,255,255,0.04);
+    border: 0.5px solid var(--border);
+    padding: 3px 9px;
+  }
+
+  /* topic stats */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 1.5rem;
+  }
+
+  .hero-stat {
+    background: var(--card-bg);
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-stat-num span { color: var(--red-bright); }
+
+  .hero-stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── FILTER BAR ── */
+  .filter-bar {
+    background: var(--off-black);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+    overflow-x: auto;
+  }
+
+  .filter-tab {
+    padding: 1.2rem 1.6rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .filter-tab:hover { color: var(--light); }
+  .filter-tab.active { color: var(--white); border-bottom-color: var(--red); }
+
+  /* ── FEATURED ARTICLE ── */
+  .featured-section {
+    background: var(--black);
+    padding: 5rem 4rem 4rem;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin-top: 2.5rem;
+  }
+
+  .featured-article {
+    background: var(--off-black);
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured-article:hover { background: var(--card-bg); }
+
+  .featured-article::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .featured-article:hover::before { transform: scaleX(1); }
+
+  .article-img {
+    width: 100%;
+    aspect-ratio: 16/8;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--border);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .article-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+    transition: filter 0.4s, transform 0.5s;
+  }
+
+  .featured-article:hover .article-img img { filter: brightness(0.85); transform: scale(1.03); }
+
+  .article-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .article-body { padding: 2rem 2.2rem; flex: 1; display: flex; flex-direction: column; }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .article-category {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    background: var(--red-muted);
+    border: 0.5px solid rgba(204,28,28,0.2);
+    padding: 3px 10px;
+  }
+
+  .article-date {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  .article-read-time {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  .article-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 0.8rem;
+    transition: color 0.2s;
+  }
+
+  .featured-article:hover .article-title { color: var(--white); }
+
+  .article-title-sm {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+    transition: color 0.2s;
+  }
+
+  .article-excerpt {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.75;
+    flex: 1;
+  }
+
+  .article-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 1.4rem;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .featured-article:hover .article-read-link { opacity: 1; }
+
+  /* featured sidebar */
+  .featured-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .sidebar-article {
+    background: var(--off-black);
+    padding: 1.6rem 1.8rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid transparent;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .sidebar-article:hover { background: var(--card-bg); border-left-color: var(--red); }
+
+  /* ── ARTICLE GRID ── */
+  .articles-section {
+    padding: 0 4rem 5rem;
+    background: var(--black);
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .article-card {
+    background: var(--off-black);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .article-card:hover { background: var(--card-bg); }
+  .article-card:hover::after { transform: scaleX(1); }
+
+  .card-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--border);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+    transition: filter 0.4s, transform 0.5s;
+  }
+
+  .article-card:hover .card-img img { filter: brightness(0.9); transform: scale(1.04); }
+
+  .card-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-body {
+    padding: 1.6rem 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── TOPIC CATEGORIES ── */
+  .topics-section {
+    background: var(--off-black);
+    padding: 5rem 4rem;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 3rem;
+  }
+
+  .topic-card {
+    background: var(--off-black);
+    padding: 2.2rem 1.8rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: background 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+
+  .topic-card:hover { background: var(--card-bg); border-bottom-color: var(--red); }
+
+  .topic-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+
+  .topic-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 5px;
+  }
+
+  .topic-count {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 0.6rem;
+  }
+
+  .topic-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── SEO KEYWORD ARTICLES ── */
+  .seo-section {
+    background: var(--navy);
+    padding: 5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .seo-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 80%, rgba(204,28,28,0.04) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .seo-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .seo-article {
+    background: var(--navy-mid);
+    padding: 2rem 2.2rem;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: background 0.3s, border-color 0.3s;
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+  }
+
+  .seo-article:hover { background: var(--card-bg); border-left-color: var(--red); }
+
+  .seo-article-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: rgba(204,28,28,0.12);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 42px;
+    transition: color 0.3s;
+  }
+
+  .seo-article:hover .seo-article-num { color: rgba(204,28,28,0.25); }
+
+  .seo-article-content { flex: 1; }
+
+  .seo-article-category {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 5px;
+  }
+
+  .seo-article-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .seo-article-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .seo-article-status {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .status-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .status-dot.published { background: #4caf82; }
+  .status-dot.coming-soon { background: var(--muted); }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-section {
+    background: var(--off-black);
+    padding: 5rem 4rem;
+  }
+
+  .newsletter-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .newsletter-text p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-form {
+    background: var(--card-bg);
+    border: 0.5px solid var(--border);
+    border-top: 2px solid var(--red);
+    padding: 2.5rem;
+  }
+
+  .newsletter-form-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .newsletter-form-sub {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .newsletter-input-row {
+    display: flex;
+    gap: 0;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    background: var(--dark);
+    border: 0.5px solid var(--border);
+    border-right: none;
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .newsletter-input:focus { border-color: var(--red); }
+  .newsletter-input::placeholder { color: var(--muted); opacity: 0.6; }
+
+  .newsletter-submit {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 13px 24px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .newsletter-submit:hover { background: var(--red-bright); }
+
+  .newsletter-note {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  .cta-band {
+    background: var(--red);
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .cta-band-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.05;
+  }
+
+  .cta-band-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.75); margin-top: 0.5rem; max-width: 500px; }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    padding: 16px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: background 0.2s;
+  }
+
+  .btn-white:hover { background: var(--off-white); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--off-black);
+    border-top: 0.5px solid var(--border);
+    padding: 4rem 4rem 2rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.06em; color: var(--white); margin-bottom: 0.5rem; }
+  .footer-brand-name span { color: var(--red-bright); }
+  .footer-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .footer-contact-line { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 300; color: var(--light); margin-bottom: 6px; }
+  .footer-contact-line a { color: var(--light); text-decoration: none; }
+  .footer-contact-line a:hover { color: var(--red-bright); }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.6rem; }
+  .footer-links a { font-size: 0.85rem; font-weight: 300; color: var(--light); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--red-bright); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-legal { font-size: 0.78rem; font-weight: 300; color: var(--muted); }
+  .footer-legal a { color: var(--muted); text-decoration: none; }
+  .footer-legal a:hover { color: var(--red-bright); }
+
+  /* ── ANIMATIONS ── */
+  .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .stagger-1 { transition-delay: 0.08s; }
+  .stagger-2 { transition-delay: 0.16s; }
+  .stagger-3 { transition-delay: 0.24s; }
+  .stagger-4 { transition-delay: 0.32s; }
+  .stagger-5 { transition-delay: 0.40s; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="data:image/png;base64,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mJD+j+5/lNeuHsfPWprS8bHZFf7u04/v97BERERERF51+x7Sf+b1D3N6vMpJtwp15plzF/neiwrnIiIiInLn2reQ/msnTvPoPadI3tixzIefP8MvvnB2P4YiIiIiIrJQXvWQ/sP3v55HDh7lSMp0bcMnzj7L399UpxYRERERkWtetZD+U6snePiue1g9dJjLdcuHnzvDb1x++tX40SIiIiIit5SbHtLfeewYj504zX0rh7l0eZ0PPvMMv96u38wfKSIiIiJyS7tpIf1HVg7zjQ8/TB54nrpyhR/6zKf3fZGqiIiIiMit4IYHZzOzX/uGv5hPpszl8y/wzrNPKpyLiIiIiLwC4Ube2G8/9i0AXNjc4O98+iMAvAMU0EVEREREXoEbEtJ/9C1v5fWrR9nevIpmzUVEREREvjZfU0h/7+u+gaWjYzY21/muP/7ojRqTiIiIiMgd7asK6WZmH/i2fy9vbW3xQ0/80Y0ek4iIiIjIHe0VLeo0M/u5b/3O/MKlc/z2px+/meMSEREREbljvayQbmb2C1//l/LGxga/9NSHX41xiYiIiIjcsf7Mcpcf/ebvBOCHP/gvb/pgRERERETkK8ykv+Ptf44PfOj31eNcRERERORV9qdCuJkZoFaKIiIiIiL75Hq5i8K5iIiIiMhisGufKJyLiIiIiCwG1ZyLiIiIiCwYt98DEBERERGRL6SQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBfP/B03zYC+RfSgSAAAAAElFTkSuQmCC" alt="SN Yacht Services">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/brands">Brands</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog" class="active">Resources</a></li>
+    <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="/">Home</a>
+  <span style="color:var(--border);">/</span>
+  <span style="color:var(--light);">Resources &amp; Blog</span>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">Expert Knowledge. Real Experience.</div>
+      <h1>Marine Electronics<br><em>Resources</em><br>&amp; Guides</h1>
+      <p class="hero-desc">
+        Guides, how-tos, and expert insight from a decade of hands-on marine electronics work in South Florida. Written by a certified Garmin, Airmar, and NMEA installer — not a content farm.
+      </p>
+      <div class="author-card fade-up stagger-1">
+        <div class="author-avatar">👤</div>
+        <div>
+          <div class="author-name">Stephen Nemeth</div>
+          <div class="author-title">Founder, SN Yacht Services — Boca Raton, FL</div>
+          <div class="author-creds">
+            <span class="author-cred">Garmin Certified</span>
+            <span class="author-cred">Airmar Certified</span>
+            <span class="author-cred">NMEA Installer</span>
+            <span class="author-cred">ABYC Certified</span>
+            <span class="author-cred">10+ Years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-up stagger-2">
+      <div style="background:var(--card-bg); border:0.5px solid var(--border); border-top:2px solid var(--red); padding:2rem; margin-bottom:1px;">
+        <div style="font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.6rem;">What You'll Find Here</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            Garmin, Simrad &amp; Raymarine installation guides
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            Forward-facing sonar setup &amp; transducer placement
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            Starlink Maritime installation tips
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            Custom dash panel design &amp; fabrication process
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            Marine audio system design &amp; JL Audio tips
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            NMEA 2000 network design &amp; troubleshooting
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.86rem; font-weight:300; color:var(--light);">
+            <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+            South Florida boating tips &amp; seasonal guides
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">20<span>+</span></div>
+          <div class="hero-stat-label">Articles Planned</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">8</div>
+          <div class="hero-stat-label">Topic Categories</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FILTER BAR ── -->
+<div class="filter-bar" role="navigation" aria-label="Blog categories">
+  <button class="filter-tab active">All Topics</button>
+  <button class="filter-tab">Custom Panels</button>
+  <button class="filter-tab">Electronics</button>
+  <button class="filter-tab">Marine Audio</button>
+  <button class="filter-tab">Sonar &amp; Fishfinders</button>
+  <button class="filter-tab">Starlink &amp; Connectivity</button>
+  <button class="filter-tab">NMEA 2000</button>
+  <button class="filter-tab">South Florida</button>
+</div>
+
+<!-- ── FEATURED ARTICLES ── -->
+<section class="featured-section" aria-labelledby="featured-heading">
+  <div class="fade-up">
+    <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.6rem;">
+      <span style="display:block; width:24px; height:1px; background:var(--red-bright);"></span>
+      Start Here
+    </div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,3rem); letter-spacing:0.03em; color:var(--white); line-height:1;" id="featured-heading">Featured Guides</h2>
+  </div>
+
+  <div class="featured-grid">
+    <!-- Main featured article -->
+    <a href="/blog/custom-marine-dash-panel-guide" class="featured-article fade-up stagger-1">
+      <div class="article-img">
+        <div class="article-img-placeholder">
+          <span style="font-size:3rem; opacity:0.15;">🎛</span>
+          <span style="font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); opacity:0.4;">Featured Article</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="article-category">Custom Panels</span>
+          <span class="article-date">Coming Soon</span>
+          <span class="article-read-time">8 min read</span>
+        </div>
+        <h3 class="article-title">The Complete Guide to Custom Marine Dash &amp; Switch Panels in South Florida</h3>
+        <p class="article-excerpt">Everything a South Florida boat owner needs to know about custom CNC-fabricated marine panels — materials, process, cost, what questions to ask an installer, and why a precision-built panel can exceed OEM factory quality. Written by the fabricator who builds them.</p>
+        <span class="article-read-link">Read Guide &rarr;</span>
+      </div>
+    </a>
+
+    <!-- Sidebar articles -->
+    <div class="featured-sidebar">
+      <a href="/blog/garmin-livescope-installation-guide" class="sidebar-article fade-up stagger-2">
+        <div class="article-meta" style="margin-bottom:0.6rem;">
+          <span class="article-category">Sonar</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Garmin LiveScope Installation: What Your Installer Needs to Get Right</h3>
+        <p class="article-excerpt" style="font-size:0.82rem;">Transducer placement, tilt angle, pole mount vs. trolling motor — the variables that separate a LiveScope system that performs from one that disappoints.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </a>
+      <a href="/blog/starlink-maritime-boat-installation-guide" class="sidebar-article fade-up stagger-3">
+        <div class="article-meta" style="margin-bottom:0.6rem;">
+          <span class="article-category">Starlink</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Starlink Maritime Installation on Your Boat: A Complete Guide</h3>
+        <p class="article-excerpt" style="font-size:0.82rem;">Flat High Performance vs. Mini, antenna placement, power requirements, and how to get broadband internet anywhere offshore.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </a>
+      <a href="/blog/jl-audio-marine-speaker-guide" class="sidebar-article fade-up stagger-4">
+        <div class="article-meta" style="margin-bottom:0.6rem;">
+          <span class="article-category">Marine Audio</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">JL Audio M3 vs M6: Which Marine Speaker Series Is Right for Your Boat?</h3>
+        <p class="article-excerpt" style="font-size:0.82rem;">A real-world comparison from an authorized JL Audio installer — performance, pricing, lighted speaker options, and which boats each series suits best.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ALL ARTICLES GRID ── -->
+<section class="articles-section" aria-labelledby="articles-heading">
+  <div style="margin-bottom:2.5rem;" class="fade-up">
+    <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.6rem;">
+      <span style="display:block; width:24px; height:1px; background:var(--red-bright);"></span>
+      All Articles
+    </div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,3rem); letter-spacing:0.03em; color:var(--white); line-height:1;" id="articles-heading">Latest &amp; Upcoming</h2>
+  </div>
+
+  <div class="articles-grid">
+
+    <a href="/blog/nmea-2000-network-guide" class="article-card fade-up">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🔗</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">NMEA 2000</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">NMEA 2000 Explained: Building a Properly Integrated Marine Electronics Network</h3>
+        <p class="article-excerpt">What NMEA 2000 actually does, why it matters, and how a properly designed network makes every device on your boat smarter.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/garmin-vs-simrad-vs-raymarine" class="article-card fade-up stagger-1">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🗺️</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Electronics</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Garmin vs. Simrad vs. Raymarine: Which Marine Electronics System Is Right for Your Boat?</h3>
+        <p class="article-excerpt">An honest comparison from a certified installer who works with all three — strengths, weaknesses, and which type of boater each brand suits best.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/autopilot-installation-south-florida" class="article-card fade-up stagger-2">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🧭</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Electronics</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Marine Autopilot Installation in South Florida: What You Need to Know Before You Buy</h3>
+        <p class="article-excerpt">Drive unit selection, course computer placement, sea trial calibration — the details that determine whether your autopilot holds course or wanders.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/marine-audio-system-design-guide" class="article-card fade-up">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🎵</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Marine Audio</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">How to Design a Marine Audio System for Your Boat: From Head Unit to Tower Speakers</h3>
+        <p class="article-excerpt">Zone planning, speaker placement, amplifier sizing, and subwoofer placement — the guide to building a system that actually sounds good on the water.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/forward-facing-sonar-south-florida" class="article-card fade-up stagger-1">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🌊</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Sonar</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Forward-Facing Sonar in South Florida: LiveScope, ActiveTarget, and Mega 360 Compared</h3>
+        <p class="article-excerpt">Which forward-facing sonar system performs best in South Florida's inshore flats, nearshore reefs, and offshore depths — from someone who installs all three.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/marine-electrical-troubleshooting-guide" class="article-card fade-up stagger-2">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🔧</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Electrical</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Common Marine Electrical Problems on South Florida Boats — and How to Fix Them</h3>
+        <p class="article-excerpt">Corrosion, voltage drop, intermittent gremlins, and bilge pump failures — the electrical issues ABYC-certified technicians see most often on South Florida vessels.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/thermal-camera-boat-guide" class="article-card fade-up">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🌡️</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Cameras</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Thermal Cameras for Boats: Why Every Night Navigator in South Florida Needs One</h3>
+        <p class="article-excerpt">What thermal cameras actually show, how they integrate with your MFD, and why they're the most underrated safety upgrade on any offshore boat.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/custom-boat-panel-vs-factory" class="article-card fade-up stagger-1">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">⚙️</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">Custom Panels</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Custom CNC Panel vs. OEM Factory Panel: Why Aftermarket Can Be Better Than Original</h3>
+        <p class="article-excerpt">Why the panel a fabricator builds from scratch with cast acrylic and laser engraving often outperforms what the boat came with from the factory floor.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a href="/blog/south-florida-boating-electronics-guide" class="article-card fade-up stagger-2">
+      <div class="card-img">
+        <div class="card-img-placeholder">
+          <span style="font-size:2.2rem; opacity:0.15;">🌴</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="article-meta">
+          <span class="article-category">South Florida</span>
+          <span class="article-date">Coming Soon</span>
+        </div>
+        <h3 class="article-title-sm">Marine Electronics for South Florida Boaters: What You Actually Need for the ICW, Inshore, and Offshore</h3>
+        <p class="article-excerpt">The Intracoastal, nearshore reefs, the Gulf Stream, and the Bahamas crossing all demand different things from your electronics. A local expert's guide.</p>
+        <span class="article-read-link">Read &rarr;</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ── TOPIC CATEGORIES ── -->
+<section class="topics-section" aria-labelledby="topics-heading">
+  <div class="fade-up">
+    <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.6rem;">
+      <span style="display:block; width:24px; height:1px; background:var(--red-bright);"></span>
+      Browse by Topic
+    </div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,3rem); letter-spacing:0.03em; color:var(--white); line-height:1;" id="topics-heading">Resource Categories</h2>
+    <p style="font-size:1rem; font-weight:300; color:var(--muted); max-width:560px; line-height:1.75; margin-top:0.8rem;">Every article is written by Stephen Nemeth — a working marine electronics installer with certifications from Garmin, Airmar, NMEA, and ABYC. This is real knowledge from real installations.</p>
+  </div>
+
+  <div class="topics-grid">
+    <div class="topic-card fade-up">
+      <span class="topic-icon">⚙️</span>
+      <div class="topic-name">Custom Panels</div>
+      <div class="topic-count">3 Articles</div>
+      <p class="topic-desc">CNC fabrication, materials, design process, OEM comparisons, and what separates a great panel from a mediocre one.</p>
+    </div>
+    <div class="topic-card fade-up stagger-1">
+      <span class="topic-icon">🧭</span>
+      <div class="topic-name">Marine Electronics</div>
+      <div class="topic-count">4 Articles</div>
+      <p class="topic-desc">Chartplotters, MFDs, radar, autopilots, brand comparisons, and installation guides from a certified Garmin installer.</p>
+    </div>
+    <div class="topic-card fade-up stagger-2">
+      <span class="topic-icon">🌊</span>
+      <div class="topic-name">Sonar &amp; Fishfinders</div>
+      <div class="topic-count">3 Articles</div>
+      <p class="topic-desc">Forward-facing sonar, transducer selection, CHIRP technology, and hull placement guides from an Airmar-certified installer.</p>
+    </div>
+    <div class="topic-card fade-up stagger-3">
+      <span class="topic-icon">🎵</span>
+      <div class="topic-name">Marine Audio</div>
+      <div class="topic-count">3 Articles</div>
+      <p class="topic-desc">JL Audio vs. Fusion, system design, lighted speakers, amplifier selection, and multi-zone audio planning guides.</p>
+    </div>
+    <div class="topic-card fade-up">
+      <span class="topic-icon">🛰️</span>
+      <div class="topic-name">Starlink &amp; Connectivity</div>
+      <div class="topic-count">2 Articles</div>
+      <p class="topic-desc">Starlink Maritime installation, antenna placement, power integration, and offshore internet options for South Florida boats.</p>
+    </div>
+    <div class="topic-card fade-up stagger-1">
+      <span class="topic-icon">🔗</span>
+      <div class="topic-name">NMEA 2000</div>
+      <div class="topic-count">2 Articles</div>
+      <p class="topic-desc">Network design, backbone sizing, device integration, and troubleshooting from a certified NMEA Electronics Installer.</p>
+    </div>
+    <div class="topic-card fade-up stagger-2">
+      <span class="topic-icon">🔧</span>
+      <div class="topic-name">Electrical</div>
+      <div class="topic-count">2 Articles</div>
+      <p class="topic-desc">Marine electrical troubleshooting, common failure points, ABYC standards, and battery system guides from a certified marine electrician.</p>
+    </div>
+    <div class="topic-card fade-up stagger-3">
+      <span class="topic-icon">🌴</span>
+      <div class="topic-name">South Florida</div>
+      <div class="topic-count">2 Articles</div>
+      <p class="topic-desc">Local knowledge — what electronics South Florida boaters actually need for the ICW, nearshore reefs, offshore runs, and Bahamas crossings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── HIGH-VALUE SEO ARTICLES ── -->
+<section class="seo-section" aria-labelledby="seo-heading">
+  <div style="position:relative; z-index:1;" class="fade-up">
+    <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.6rem;">
+      <span style="display:block; width:24px; height:1px; background:var(--red-bright);"></span>
+      In-Depth Guides
+    </div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,3rem); letter-spacing:0.03em; color:var(--white); line-height:1; margin-bottom:0.8rem;" id="seo-heading">South Florida Boater Guides</h2>
+    <p style="font-size:1rem; font-weight:300; color:var(--muted); max-width:580px; line-height:1.75;">Longer, more detailed guides written specifically for South Florida boat owners — local conditions, local marinas, local knowledge.</p>
+  </div>
+
+  <div class="seo-articles-grid">
+    <a href="/blog/marine-electronics-installer-south-florida" class="seo-article fade-up stagger-1">
+      <div class="seo-article-num">01</div>
+      <div class="seo-article-content">
+        <div class="seo-article-category">Local Guide</div>
+        <div class="seo-article-title">How to Choose a Marine Electronics Installer in South Florida</div>
+        <p class="seo-article-desc">Certifications that matter, questions to ask, red flags to watch for, and why the cheapest installer is rarely the best value on a $5,000 electronics build.</p>
+        <div class="seo-article-status"><span class="status-dot coming-soon"></span>Coming Soon</div>
+      </div>
+    </a>
+
+    <a href="/blog/garmin-chartplotter-installation-boca-raton" class="seo-article fade-up stagger-2">
+      <div class="seo-article-num">02</div>
+      <div class="seo-article-content">
+        <div class="seo-article-category">Electronics · Local</div>
+        <div class="seo-article-title">Garmin Chartplotter Installation in Boca Raton &amp; South Florida</div>
+        <p class="seo-article-desc">Everything Boca Raton and South Florida boat owners need to know about Garmin chartplotter installation — models, cost, certified installer requirements, and what the process looks like.</p>
+        <div class="seo-article-status"><span class="status-dot coming-soon"></span>Coming Soon</div>
+      </div>
+    </a>
+
+    <a href="/blog/custom-boat-panel-fabrication-florida" class="seo-article fade-up">
+      <div class="seo-article-num">03</div>
+      <div class="seo-article-content">
+        <div class="seo-article-category">Custom Panels · Local</div>
+        <div class="seo-article-title">Custom Boat Dash Panel Fabrication in Florida: Cost, Process &amp; What to Expect</div>
+        <p class="seo-article-desc">A transparent breakdown of the custom panel fabrication process — materials, CNC machining, laser engraving, wiring, and what drives the price of a quality build.</p>
+        <div class="seo-article-status"><span class="status-dot coming-soon"></span>Coming Soon</div>
+      </div>
+    </a>
+
+    <a href="/blog/marine-audio-installation-fort-lauderdale" class="seo-article fade-up stagger-1">
+      <div class="seo-article-num">04</div>
+      <div class="seo-article-content">
+        <div class="seo-article-category">Marine Audio · Local</div>
+        <div class="seo-article-title">Marine Audio Installation in Fort Lauderdale &amp; South Florida</div>
+        <p class="seo-article-desc">JL Audio, Fusion, and Wet Sounds — how to build the right marine audio system for South Florida's open-air boating environment, from cockpit to tower.</p>
+        <div class="seo-article-status"><span class="status-dot coming-soon"></span>Coming Soon</div>
+      </div>
+    </a>
+
+    <a href="/blog/starlink-boat-installation-florida" class="seo-article fade-up stagger-2">
+      <div class="seo-article-num">05</div>
+      <div class="seo-article-content">
+        <div class="seo-article-category">Starlink · Local</div>
+        <div class="seo-article-title">Starlink Installation on Boats in Florida: What Every Boater Needs to Know</div>
+        <p class="seo-article-desc">Offshore internet for Florida boaters — which Starlink hardware to choose, how it's installed, what it actually costs, and how it performs in the Gulf Stream and the Bahamas.</p>
+        <div class="seo-article-status"><span class="status-dot coming-soon"></span>Coming Soon</div>
+      </div>
+    </a>
+
+    <a href="/blog/vessel-monitoring-system-guide-florida" class="seo-article fade-up stagger-3">
+      <div class="seo-article-num">06</div>
+      <div class="seo-article-content">
+        <div class="seo-article-category">Electronics · Safety</div>
+        <div class="seo-article-title">Vessel Monitoring Systems for Florida Boats: Protect Your Investment at the Dock</div>
+        <p class="seo-article-desc">Bilge alerts, battery monitoring, shore power status, and security cameras — why remote vessel monitoring is essential for every boat left unattended in South Florida.</p>
+        <div class="seo-article-status"><span class="status-dot coming-soon"></span>Coming Soon</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<section class="newsletter-section" aria-labelledby="newsletter-heading">
+  <div class="newsletter-inner">
+    <div class="newsletter-text fade-up">
+      <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.8rem;">
+        <span style="display:block; width:24px; height:1px; background:var(--red-bright);"></span>
+        Stay in the Loop
+      </div>
+      <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,2.8rem); letter-spacing:0.03em; color:var(--white); line-height:1; margin-bottom:1.2rem;" id="newsletter-heading">New Articles &amp;<br>Product Updates</h2>
+      <p>Get notified when new guides go live — no spam, just useful content from a working marine electronics installer with over a decade of South Florida experience.</p>
+      <p>We also send occasional updates on new SN Yacht Products releases, seasonal promotions, and tips specific to South Florida boating conditions.</p>
+      <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:0.85rem; font-weight:300; color:var(--muted);">
+          <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+          New guide notifications — published as articles are completed
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:0.85rem; font-weight:300; color:var(--muted);">
+          <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+          SN Yacht Products new releases and promotions
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:0.85rem; font-weight:300; color:var(--muted);">
+          <span style="width:5px; height:5px; background:var(--red); transform:rotate(45deg); flex-shrink:0; display:block;"></span>
+          Seasonal tips for South Florida boaters
+        </div>
+      </div>
+    </div>
+
+    <div class="newsletter-form fade-up stagger-2">
+      <div class="newsletter-form-title">Get New Articles First</div>
+      <p class="newsletter-form-sub">Join South Florida boaters who get our guides delivered directly. Unsubscribe anytime.</p>
+      <div class="newsletter-input-row">
+        <input type="email" class="newsletter-input" placeholder="your@email.com">
+        <button class="newsletter-submit">Subscribe &rarr;</button>
+      </div>
+      <p class="newsletter-note">No spam. No selling your email. Just new guides and occasional updates from SN Yacht Services and SN Yacht Products.</p>
+
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:0.5px solid var(--border);">
+        <div style="font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:0.8rem;">Follow for Real-Time Updates</div>
+        <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+          <a href="https://www.instagram.com/snyachtservices" target="_blank" rel="noopener" style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red-bright); text-decoration:none; display:flex; align-items:center; gap:6px;">📸 Instagram</a>
+          <a href="https://www.facebook.com/snyachtservices" target="_blank" rel="noopener" style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red-bright); text-decoration:none; display:flex; align-items:center; gap:6px;">📘 Facebook</a>
+          <a href="https://www.youtube.com/@snyachtservices" target="_blank" rel="noopener" style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red-bright); text-decoration:none; display:flex; align-items:center; gap:6px;">▶️ YouTube</a>
+          <a href="https://www.tiktok.com/@snyachtproducts" target="_blank" rel="noopener" style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red-bright); text-decoration:none; display:flex; align-items:center; gap:6px;">🎵 TikTok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <div>
+    <h2 class="cta-band-title">Have a Question Not Answered Here?</h2>
+    <p class="cta-band-sub">Call or email us directly. We love talking about this stuff and are happy to point you in the right direction — no sales pressure.</p>
+  </div>
+  <a href="tel:7543330479" class="btn-white">📞 (754) 333-0479</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+            <p class="footer-tagline">Tailored Tech, Precision Crafted</p>
+      <div class="footer-contact-line">📍 <span>130 NW 20th St, Bay 23, Boca Raton, FL 33431</span></div>
+      <div class="footer-contact-line">📞 <a href="tel:7543330479">(754) 333-0479</a></div>
+      <div class="footer-contact-line">✉️ <a href="mailto:info@snyacht.com">info@snyacht.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="/custom-panels">Custom Dash Panels</a></li>
+        <li><a href="/electronics">Electronics Installation</a></li>
+        <li><a href="/audio">Marine Audio</a></li>
+        <li><a href="/navigation">Autopilot &amp; Navigation</a></li>
+        <li><a href="/electrical">Electrical Repair</a></li>
+        <li><a href="/mobile">Mobile Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/gallery">Project Gallery</a></li>
+        <li><a href="/brands">Brands We Carry</a></li>
+        <li><a href="/blog">Resources &amp; Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="/service-area/boca-raton">Boca Raton</a></li>
+        <li><a href="/service-area/fort-lauderdale">Fort Lauderdale</a></li>
+        <li><a href="/service-area/miami">Miami</a></li>
+        <li><a href="/service-area/palm-beach">Palm Beach</a></li>
+        <li><a href="/service-area/deerfield-beach">Deerfield Beach</a></li>
+        <li><a href="/service-area/pompano-beach">Pompano Beach</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">&copy; 2025 SN Yacht Services, LLC. All rights reserved. | <a href="/privacy">Privacy Policy</a></p>
+    <p class="footer-legal">Marine electronics resources &amp; blog — Boca Raton, South Florida</p>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 60 ? 'rgba(10,10,10,0.99)' : 'rgba(10,10,10,0.95)';
+  });
+
+  // Filter tabs — visual only for now (Shopify blog handles actual filtering)
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
