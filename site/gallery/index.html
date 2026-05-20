@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browse SN Yacht Services' project gallery — custom marine dash panels, switch panel fabrications, marine electronics installations, audio systems, and more. South Florida's premier marine electronics installer. Call (754) 333-0479.">
+<meta name="keywords" content="marine electronics installation photos South Florida, custom boat dash panel gallery, marine panel fabrication examples, boat electronics install photos Florida, JL Audio marine install gallery, Garmin installation photos, custom switch panel examples Boca Raton, marine audio installation gallery Florida">
+<meta property="og:title" content="Project Gallery | SN Yacht Services | South Florida Marine Electronics">
+<meta property="og:description" content="See our work — custom CNC dash panels, marine electronics installations, audio systems, and full helm transformations across South Florida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.floridaboatservice.com/gallery">
+<title>Project Gallery | SN Yacht Services | Marine Electronics South Florida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --off-black: #111214;
+    --dark: #161a1e;
+    --card-bg: #1a1e24;
+    --border: rgba(255,255,255,0.08);
+    --red: #cc1c1c;
+    --red-bright: #e02020;
+    --red-muted: rgba(204,28,28,0.15);
+    --white: #ffffff;
+    --off-white: #f0ede8;
+    --muted: #8a8f96;
+    --light: #c8cdd4;
+    --navy: #0d1520;
+    --navy-mid: #111d2e;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 72px;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+  }
+
+  .nav-logo img { height: 38px; width: auto; }
+  .nav-logo span { color: var(--red-bright); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--red-bright); }
+  .nav-links a.active { color: var(--red-bright); }
+  .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 10px 22px; }
+  .nav-cta:hover { background: var(--red-bright) !important; color: var(--white) !important; }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    padding: 100px 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--red-bright); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--navy);
+    padding: 3rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(204,28,28,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--red-bright);
+  }
+
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-hero h1 em { color: var(--red-bright); font-style: normal; }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--light);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 2rem;
+  }
+
+  /* hero stats */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .hero-stat {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-stat-num span { color: var(--red-bright); }
+
+  .hero-stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 5px;
+  }
+
+  /* ── FILTER TABS ── */
+  .filter-bar {
+    background: var(--off-black);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+  }
+
+  .filter-tab {
+    padding: 1.2rem 1.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .filter-tab:hover { color: var(--light); }
+  .filter-tab.active { color: var(--white); border-bottom-color: var(--red); }
+
+  /* ── GALLERY SECTIONS ── */
+  .gallery-section {
+    padding: 5rem 4rem;
+    background: var(--black);
+  }
+
+  .gallery-section:nth-child(even) { background: var(--off-black); }
+
+  .gallery-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .gallery-section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .gallery-section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 20px; height: 1px;
+    background: var(--red-bright);
+  }
+
+  .gallery-section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .gallery-section-count {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── GRID LAYOUTS ── */
+
+  /* Featured (1 large + 2 tall + 1 wide) */
+  .grid-featured {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 320px 240px;
+    gap: 4px;
+  }
+
+  .grid-featured .cell-large {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  /* Standard 3-col */
+  .grid-standard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+
+  .grid-standard .cell { height: 280px; }
+
+  /* Wide 4-col */
+  .grid-wide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  .grid-wide .cell { height: 240px; }
+
+  /* Duo (2 equal) */
+  .grid-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .grid-duo .cell { height: 380px; }
+
+  /* ── GALLERY CELL ── */
+  .gallery-cell {
+    background: var(--card-bg);
+    border: 0.5px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-cell img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+    transition: filter 0.4s, transform 0.6s;
+    display: block;
+  }
+
+  .gallery-cell:hover img {
+    filter: brightness(0.95);
+    transform: scale(1.04);
+  }
+
+  /* Placeholder state (before photos are uploaded) */
+  .cell-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  .placeholder-icon {
+    font-size: 2.5rem;
+    opacity: 0.18;
+  }
+
+  .placeholder-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.5;
+    text-align: center;
+  }
+
+  /* Overlay on hover */
+  .cell-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%);
+    opacity: 0;
+    transition: opacity 0.35s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.4rem 1.6rem;
+    pointer-events: none;
+  }
+
+  .gallery-cell:hover .cell-overlay { opacity: 1; }
+
+  .overlay-category {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 4px;
+  }
+
+  .overlay-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .overlay-detail {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--light);
+    margin-top: 3px;
+  }
+
+  /* Upload prompt badge on placeholder cells */
+  .upload-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--red-muted);
+    border: 0.5px solid rgba(204,28,28,0.25);
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+  }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.94);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .lightbox.open { display: flex; }
+
+  .lightbox-inner {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 85vh;
+  }
+
+  .lightbox-img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+  }
+
+  .lightbox-placeholder {
+    width: 100%;
+    height: 500px;
+    background: var(--card-bg);
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .lightbox-caption {
+    padding: 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .lightbox-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .lightbox-meta {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: -3rem; right: 0;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+    line-height: 1;
+  }
+
+  .lightbox-close:hover { color: var(--white); }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: 0.5px solid var(--border);
+    color: var(--white);
+    width: 44px; height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.2s;
+    user-select: none;
+  }
+
+  .lightbox-nav:hover { background: var(--red); }
+  .lightbox-nav.prev { left: -60px; }
+  .lightbox-nav.next { right: -60px; }
+
+  /* ── UPLOAD CTA ── */
+  .upload-cta {
+    background: var(--navy);
+    border: 0.5px solid var(--border);
+    border-top: 2px solid var(--red);
+    padding: 3rem 4rem;
+    margin: 0 4rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .upload-cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .upload-cta-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.7;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--red-bright); transform: translateY(-1px); }
+
+  /* ── VIDEO SECTION ── */
+  .video-section {
+    padding: 5rem 4rem;
+    background: var(--navy-mid);
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .video-card {
+    background: var(--card-bg);
+    border: 0.5px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.3s;
+    cursor: pointer;
+  }
+
+  .video-card:hover { border-color: rgba(204,28,28,0.35); }
+
+  .video-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+
+  .play-btn {
+    position: absolute;
+    width: 56px; height: 56px;
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  }
+
+  .video-card:hover .play-btn { background: var(--red-bright); transform: scale(1.08); }
+
+  .video-thumb-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .video-info { padding: 1.2rem 1.4rem; }
+
+  .video-category {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 5px;
+  }
+
+  .video-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .video-desc {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── SOCIAL PROOF ── */
+  .social-strip {
+    background: var(--off-black);
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .social-icon { font-size: 1.4rem; }
+
+  .social-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  .social-text a {
+    color: var(--red-bright);
+    text-decoration: none;
+  }
+
+  .social-text a:hover { text-decoration: underline; }
+
+  /* ── CTA ── */
+  .cta-band {
+    background: var(--red);
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .cta-band-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.05;
+  }
+
+  .cta-band-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.75); margin-top: 0.5rem; max-width: 500px; }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    padding: 16px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: background 0.2s;
+  }
+
+  .btn-white:hover { background: var(--off-white); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--off-black);
+    border-top: 0.5px solid var(--border);
+    padding: 4rem 4rem 2rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.06em; color: var(--white); margin-bottom: 0.5rem; }
+  .footer-brand-name span { color: var(--red-bright); }
+  .footer-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .footer-contact-line { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 300; color: var(--light); margin-bottom: 6px; }
+  .footer-contact-line a { color: var(--light); text-decoration: none; }
+  .footer-contact-line a:hover { color: var(--red-bright); }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.6rem; }
+  .footer-links a { font-size: 0.85rem; font-weight: 300; color: var(--light); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--red-bright); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-legal { font-size: 0.78rem; font-weight: 300; color: var(--muted); }
+  .footer-legal a { color: var(--muted); text-decoration: none; }
+  .footer-legal a:hover { color: var(--red-bright); }
+
+  /* ── ANIMATIONS ── */
+  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .stagger-1 { transition-delay: 0.08s; }
+  .stagger-2 { transition-delay: 0.16s; }
+  .stagger-3 { transition-delay: 0.24s; }
+  .stagger-4 { transition-delay: 0.32s; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="data:image/png;base64,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mJD+j+5/lNeuHsfPWprS8bHZFf7u04/v97BERERERF51+x7Sf+b1D3N6vMpJtwp15plzF/neiwrnIiIiInLn2reQ/msnTvPoPadI3tixzIefP8MvvnB2P4YiIiIiIrJQXvWQ/sP3v55HDh7lSMp0bcMnzj7L399UpxYRERERkWtetZD+U6snePiue1g9dJjLdcuHnzvDb1x++tX40SIiIiIit5SbHtLfeewYj504zX0rh7l0eZ0PPvMMv96u38wfKSIiIiJyS7tpIf1HVg7zjQ8/TB54nrpyhR/6zKf3fZGqiIiIiMit4IYHZzOzX/uGv5hPpszl8y/wzrNPKpyLiIiIiLwC4Ube2G8/9i0AXNjc4O98+iMAvAMU0EVEREREXoEbEtJ/9C1v5fWrR9nevIpmzUVEREREvjZfU0h/7+u+gaWjYzY21/muP/7ojRqTiIiIiMgd7asK6WZmH/i2fy9vbW3xQ0/80Y0ek4iIiIjIHe0VLeo0M/u5b/3O/MKlc/z2px+/meMSEREREbljvayQbmb2C1//l/LGxga/9NSHX41xiYiIiIjcsf7Mcpcf/ebvBOCHP/gvb/pgRERERETkK8ykv+Ptf44PfOj31eNcRERERORV9qdCuJkZoFaKIiIiIiL75Hq5i8K5iIiIiMhisGufKJyLiIiIiCwG1ZyLiIiIiCwYt98DEBERERGRL6SQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBaOQLiIiIiKyYBTSRUREREQWjEK6iIiIiMiCUUgXEREREVkwCukiIiIiIgtGIV1EREREZMEopIuIiIiILBiFdBERERGRBfP/B03zYC+RfSgSAAAAAElFTkSuQmCC" alt="SN Yacht Services">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/gallery" class="active">Gallery</a></li>
+    <li><a href="/brands">Brands</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog">Resources</a></li>
+    <li><a href="/#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb">
+  <a href="/">Home</a>
+  <span style="color:var(--border);">/</span>
+  <span style="color:var(--light);">Project Gallery</span>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">Our Work</div>
+      <h1>The Work<br>Speaks for <em>Itself.</em></h1>
+      <p class="hero-desc">
+        Every project in this gallery represents a real vessel, a real customer, and our absolute best effort. Custom dash panels, full electronics builds, marine audio systems, and complete helm transformations — all built right here in South Florida.
+      </p>
+      <p style="font-size:0.85rem; font-weight:300; color:var(--muted); line-height:1.7;">
+        Photos are being added regularly as we complete new projects. Check back often — or follow us on social media for real-time project updates.
+      </p>
+    </div>
+
+    <div class="hero-stats fade-up stagger-2">
+      <div class="hero-stat">
+        <div class="hero-stat-num">500<span>+</span></div>
+        <div class="hero-stat-label">Vessels Serviced</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">10<span>+</span></div>
+        <div class="hero-stat-label">Years of Builds</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Service Categories</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── STICKY FILTER BAR ── -->
+<div class="filter-bar" role="navigation" aria-label="Gallery filter">
+  <button class="filter-tab active" onclick="filterGallery('all', this)">All Projects</button>
+  <button class="filter-tab" onclick="filterGallery('panels', this)">Custom Panels</button>
+  <button class="filter-tab" onclick="filterGallery('electronics', this)">Electronics</button>
+  <button class="filter-tab" onclick="filterGallery('audio', this)">Marine Audio</button>
+  <button class="filter-tab" onclick="filterGallery('helm', this)">Full Helm Builds</button>
+  <button class="filter-tab" onclick="filterGallery('electrical', this)">Electrical</button>
+</div>
+
+<!-- ── CUSTOM PANELS GALLERY ── -->
+<div class="gallery-section" data-category="panels" id="panels">
+  <div class="gallery-section-header">
+    <div>
+      <div class="gallery-section-eyebrow">CNC Fabrication</div>
+      <div class="gallery-section-title">Custom Dash &amp; Switch Panels</div>
+    </div>
+    <span class="gallery-section-count">Cast Acrylic · Stainless · Laser Engraved · Hand Polished</span>
+  </div>
+
+  <!-- Featured layout -->
+  <div class="grid-featured fade-up">
+    <div class="gallery-cell cell-large" onclick="openLightbox('panels', 0)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🎛</span>
+        <span class="placeholder-label">Feature Panel — Center Console Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Custom Panel</div>
+        <div class="overlay-title">Center Console Helm Panel</div>
+        <div class="overlay-detail">Cast acrylic · Backlit switches · Hidden hardware</div>
+      </div>
+    </div>
+    <div class="gallery-cell" onclick="openLightbox('panels', 1)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon" style="font-size:1.8rem;">✨</span>
+        <span class="placeholder-label">Backlit Switch Detail</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Detail Shot</div>
+        <div class="overlay-title">LED Backlit Switch Array</div>
+      </div>
+    </div>
+    <div class="gallery-cell" onclick="openLightbox('panels', 2)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon" style="font-size:1.8rem;">🔩</span>
+        <span class="placeholder-label">Stainless Hardware Detail</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Detail Shot</div>
+        <div class="overlay-title">316 Stainless Hardware</div>
+      </div>
+    </div>
+    <div class="gallery-cell" onclick="openLightbox('panels', 3)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon" style="font-size:1.8rem;">🚤</span>
+        <span class="placeholder-label">Sportfish Helm Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Custom Panel</div>
+        <div class="overlay-title">Offshore Sportfisher Panel</div>
+      </div>
+    </div>
+    <div class="gallery-cell" onclick="openLightbox('panels', 4)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon" style="font-size:1.8rem;">🛥</span>
+        <span class="placeholder-label">Motoryacht Panel</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Custom Panel</div>
+        <div class="overlay-title">Motoryacht Helm Panel</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standard 3-col -->
+  <div class="grid-standard fade-up stagger-1" style="margin-top:4px;">
+    <div class="gallery-cell cell" onclick="openLightbox('panels', 5)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🎛</span>
+        <span class="placeholder-label">Laser Engraving Close-Up</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Detail</div>
+        <div class="overlay-title">Laser Engraved Switch Labels</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('panels', 6)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">⚙️</span>
+        <span class="placeholder-label">Wiring Harness</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Detail</div>
+        <div class="overlay-title">Clean Wiring Harness Build</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('panels', 7)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🏆</span>
+        <span class="placeholder-label">Completed Panel Install</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Completed Build</div>
+        <div class="overlay-title">Finished Center Console Install</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ELECTRONICS GALLERY ── -->
+<div class="gallery-section" data-category="electronics" id="electronics">
+  <div class="gallery-section-header">
+    <div>
+      <div class="gallery-section-eyebrow">Certified Installation</div>
+      <div class="gallery-section-title">Marine Electronics Installs</div>
+    </div>
+    <span class="gallery-section-count">Garmin · Simrad · Raymarine · Starlink · FLIR</span>
+  </div>
+
+  <div class="grid-wide fade-up">
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 0)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🗺️</span>
+        <span class="placeholder-label">Garmin Chartplotter Install</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">GPS / Navigation</div>
+        <div class="overlay-title">Garmin Chartplotter Install</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 1)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">📡</span>
+        <span class="placeholder-label">Radar Installation</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Radar</div>
+        <div class="overlay-title">Radome Radar Install</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 2)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🛰️</span>
+        <span class="placeholder-label">Starlink Maritime</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Starlink</div>
+        <div class="overlay-title">Starlink Maritime Installation</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 3)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🌊</span>
+        <span class="placeholder-label">Forward Facing Sonar</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Sonar</div>
+        <div class="overlay-title">Garmin LiveScope Install</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-standard fade-up stagger-1" style="margin-top:4px;">
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 4)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🧭</span>
+        <span class="placeholder-label">Autopilot System</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Autopilot</div>
+        <div class="overlay-title">Autopilot Drive Unit &amp; Control Head</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 5)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🌡️</span>
+        <span class="placeholder-label">Thermal Camera</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Thermal / Night Vision</div>
+        <div class="overlay-title">FLIR Thermal Camera Install</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electronics', 6)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🔗</span>
+        <span class="placeholder-label">NMEA 2000 Network</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">NMEA 2000</div>
+        <div class="overlay-title">Full Network Integration Build</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── AUDIO GALLERY ── -->
+<div class="gallery-section" data-category="audio" id="audio">
+  <div class="gallery-section-header">
+    <div>
+      <div class="gallery-section-eyebrow">Authorized JL Audio &amp; Fusion Dealer</div>
+      <div class="gallery-section-title">Marine Audio Installations</div>
+    </div>
+    <span class="gallery-section-count">JL Audio M3 / M6 · Fusion · Amplifiers · Tower Speakers · Lighted</span>
+  </div>
+
+  <div class="grid-duo fade-up">
+    <div class="gallery-cell cell" onclick="openLightbox('audio', 0)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🔊</span>
+        <span class="placeholder-label">JL Audio M6 Lighted Speaker Install</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">JL Audio M6 Series</div>
+        <div class="overlay-title">RGB Lighted Speaker Installation</div>
+        <div class="overlay-detail">Transflective™ LED · Center console · Fort Lauderdale</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('audio', 1)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🗼</span>
+        <span class="placeholder-label">Tower Speaker System</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Tower Speakers</div>
+        <div class="overlay-title">JL Audio Tower Speaker Build</div>
+        <div class="overlay-detail">Wakeboard tower · Sportfisher · Boca Raton</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-wide fade-up stagger-1" style="margin-top:4px;">
+    <div class="gallery-cell cell" onclick="openLightbox('audio', 2)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">⚡</span>
+        <span class="placeholder-label">Amplifier Rack Install</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Amplifiers</div>
+        <div class="overlay-title">JL Audio XDM Amp Install</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('audio', 3)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">📻</span>
+        <span class="placeholder-label">Fusion Head Unit</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Fusion Stereo</div>
+        <div class="overlay-title">Fusion Apollo RA770 Install</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('audio', 4)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🥁</span>
+        <span class="placeholder-label">Subwoofer Enclosure Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Subwoofer</div>
+        <div class="overlay-title">Custom Sub Enclosure Build</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('audio', 5)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">💡</span>
+        <span class="placeholder-label">Light Controller Setup</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">LED Light Controller</div>
+        <div class="overlay-title">JL Audio MLC-RW Controller Install</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FULL HELM BUILDS ── -->
+<div class="gallery-section" data-category="helm" id="helm">
+  <div class="gallery-section-header">
+    <div>
+      <div class="gallery-section-eyebrow">Complete Transformations</div>
+      <div class="gallery-section-title">Full Helm Builds</div>
+    </div>
+    <span class="gallery-section-count">Panel + Electronics + Audio — Start to Finish</span>
+  </div>
+
+  <div class="grid-standard fade-up">
+    <div class="gallery-cell cell" style="height:360px;" onclick="openLightbox('helm', 0)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🚤</span>
+        <span class="placeholder-label">Center Console — Full Helm Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Full Build</div>
+        <div class="overlay-title">Center Console — Complete Helm Transformation</div>
+        <div class="overlay-detail">Custom panel · Garmin electronics · JL Audio</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" style="height:360px;" onclick="openLightbox('helm', 1)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🎣</span>
+        <span class="placeholder-label">Sportfisher — Full Helm Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Full Build</div>
+        <div class="overlay-title">Offshore Sportfisher — Complete Electronics Build</div>
+        <div class="overlay-detail">Garmin MFD network · Radar · Sonar · Autopilot</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" style="height:360px;" onclick="openLightbox('helm', 2)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🛥</span>
+        <span class="placeholder-label">Motoryacht — Full Helm Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Full Build</div>
+        <div class="overlay-title">Motoryacht — Premium Helm &amp; Audio Build</div>
+        <div class="overlay-detail">Custom panel · Simrad network · Fusion multi-zone audio</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ELECTRICAL GALLERY ── -->
+<div class="gallery-section" data-category="electrical" id="electrical">
+  <div class="gallery-section-header">
+    <div>
+      <div class="gallery-section-eyebrow">ABYC Certified Work</div>
+      <div class="gallery-section-title">Electrical Repairs &amp; Rewiring</div>
+    </div>
+    <span class="gallery-section-count">Troubleshooting · Clean Rewiring · ABYC Standards</span>
+  </div>
+
+  <div class="grid-wide fade-up">
+    <div class="gallery-cell cell" onclick="openLightbox('electrical', 0)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🔧</span>
+        <span class="placeholder-label">Clean Rewire Before/After</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Electrical</div>
+        <div class="overlay-title">Full Bilge Rewire — Before &amp; After</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electrical', 1)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">⚡</span>
+        <span class="placeholder-label">Battery Bank Build</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Electrical</div>
+        <div class="overlay-title">Battery Bank &amp; Distribution Build</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electrical', 2)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🔌</span>
+        <span class="placeholder-label">Shore Power Install</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Electrical</div>
+        <div class="overlay-title">Shore Power System Installation</div>
+      </div>
+    </div>
+    <div class="gallery-cell cell" onclick="openLightbox('electrical', 3)">
+      <div class="cell-placeholder">
+        <span class="placeholder-icon">🧰</span>
+        <span class="placeholder-label">Wire Loom / Cable Management</span>
+      </div>
+      <div class="upload-badge">Add Photo</div>
+      <div class="cell-overlay">
+        <div class="overlay-category">Electrical</div>
+        <div class="overlay-title">Clean Cable Management Build</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PHOTO UPLOAD CTA ── -->
+<div class="upload-cta fade-up">
+  <div>
+    <div class="upload-cta-title">This Gallery Grows With Every Build</div>
+    <p class="upload-cta-text">We add new project photos regularly as work is completed. If you're a past customer and would like your boat featured — or if you want to see more examples of a specific type of work — give us a call. We're proud of every job we've done and happy to share more.</p>
+  </div>
+  <a href="tel:7543330479" class="btn-primary">📞 (754) 333-0479</a>
+</div>
+
+<!-- ── VIDEO SECTION ── -->
+<section class="video-section" aria-labelledby="video-heading">
+  <div style="margin-bottom:0.5rem;">
+    <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--red-bright); margin-bottom:0.8rem;" class="fade-up">
+      <span style="display:block; width:24px; height:1px; background:var(--red-bright);"></span>
+      Video Gallery
+    </div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,3rem); letter-spacing:0.03em; color:var(--white); line-height:1;" class="fade-up stagger-1" id="video-heading">See the Work in Motion</h2>
+    <p style="font-size:1rem; font-weight:300; color:var(--muted); max-width:560px; line-height:1.75; margin-top:0.8rem;" class="fade-up stagger-2">Time-lapses, finished project walkthroughs, and installation process videos — added as projects are completed.</p>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-card fade-up stagger-1">
+      <div class="video-thumb">
+        <div class="video-thumb-placeholder">
+          <span style="font-size:2rem; opacity:0.2;">🎬</span>
+          <span style="font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); opacity:0.5;">Video Coming Soon</span>
+        </div>
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Custom Panel</div>
+        <div class="video-title">CNC Panel Fabrication Process</div>
+        <p class="video-desc">From raw cast acrylic to finished panel — watch the full fabrication process from design to hand-polished install.</p>
+      </div>
+    </div>
+
+    <div class="video-card fade-up stagger-2">
+      <div class="video-thumb">
+        <div class="video-thumb-placeholder">
+          <span style="font-size:2rem; opacity:0.2;">🎬</span>
+          <span style="font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); opacity:0.5;">Video Coming Soon</span>
+        </div>
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Electronics</div>
+        <div class="video-title">Full Garmin Helm Build Walkthrough</div>
+        <p class="video-desc">A complete walkthrough of a full Garmin electronics installation — chartplotter, radar, sonar, and NMEA 2000 network integration.</p>
+      </div>
+    </div>
+
+    <div class="video-card fade-up stagger-3">
+      <div class="video-thumb">
+        <div class="video-thumb-placeholder">
+          <span style="font-size:2rem; opacity:0.2;">🎬</span>
+          <span style="font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); opacity:0.5;">Video Coming Soon</span>
+        </div>
+        <div class="play-btn">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Marine Audio</div>
+        <div class="video-title">JL Audio Lighted Speaker Demo</div>
+        <p class="video-desc">See and hear a completed JL Audio M6 RGB lighted speaker system in action — at the dock and underway after dark.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL STRIP ── -->
+<div class="social-strip">
+  <div class="social-item">
+    <span class="social-icon">📸</span>
+    <div class="social-text">Follow our work on Instagram — <a href="#">@snyachtservices</a></div>
+  </div>
+  <div class="social-item">
+    <span class="social-icon">📘</span>
+    <div class="social-text">Like us on Facebook — <a href="#">SN Yacht Services</a></div>
+  </div>
+  <div class="social-item">
+    <span class="social-icon">▶️</span>
+    <div class="social-text">Watch project videos on YouTube — <a href="#">SN Yacht Services</a></div>
+  </div>
+  <div class="social-item">
+    <span class="social-icon">⭐</span>
+    <div class="social-text">Read our reviews on <a href="#">Google</a></div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <div>
+    <h2 class="cta-band-title">Want Your Boat in This Gallery?</h2>
+    <p class="cta-band-sub">Call us to discuss your project. Every build starts with a conversation — and ends with work you'll be proud to show off.</p>
+  </div>
+  <a href="tel:7543330479" class="btn-white">📞 (754) 333-0479</a>
+</div>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <button class="lightbox-nav prev" onclick="navigateLightbox(-1)" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-nav next" onclick="navigateLightbox(1)" aria-label="Next">&#8594;</button>
+    <div class="lightbox-placeholder" id="lightbox-content">
+      <span style="font-size:3rem; opacity:0.2;">📷</span>
+      <span style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted);">Photo Coming Soon</span>
+    </div>
+    <div class="lightbox-caption">
+      <div>
+        <div class="lightbox-title" id="lightbox-title">Project Photo</div>
+        <div class="lightbox-meta" id="lightbox-meta">SN Yacht Services — South Florida</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+            <p class="footer-tagline">Tailored Tech, Precision Crafted</p>
+      <div class="footer-contact-line">📍 <span>130 NW 20th St, Boca Raton, FL 33431</span></div>
+      <div class="footer-contact-line">📞 <a href="tel:7543330479">(754) 333-0479</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="/custom-panels">Custom Dash Panels</a></li>
+        <li><a href="/electronics">Electronics Installation</a></li>
+        <li><a href="/audio">Marine Audio</a></li>
+        <li><a href="/navigation">Autopilot &amp; Navigation</a></li>
+        <li><a href="/electrical">Electrical Repair</a></li>
+        <li><a href="/mobile">Mobile Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/gallery">Project Gallery</a></li>
+        <li><a href="/brands">Brands We Carry</a></li>
+        <li><a href="/blog">Resources &amp; Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="/service-area/boca-raton">Boca Raton</a></li>
+        <li><a href="/service-area/fort-lauderdale">Fort Lauderdale</a></li>
+        <li><a href="/service-area/miami">Miami</a></li>
+        <li><a href="/service-area/palm-beach">Palm Beach</a></li>
+        <li><a href="/service-area/deerfield-beach">Deerfield Beach</a></li>
+        <li><a href="/service-area/pompano-beach">Pompano Beach</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">&copy; 2025 SN Yacht Services, LLC. All rights reserved. | <a href="/privacy">Privacy Policy</a></p>
+    <p class="footer-legal">Marine electronics installation gallery — Boca Raton, South Florida</p>
+  </div>
+</footer>
+
+<script>
+  // ── Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Nav scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 60 ? 'rgba(10,10,10,0.99)' : 'rgba(10,10,10,0.95)';
+  });
+
+  // ── Gallery filter
+  function filterGallery(category, btn) {
+    // Update active tab
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Show/hide sections
+    document.querySelectorAll('.gallery-section').forEach(section => {
+      if (category === 'all' || section.dataset.category === category) {
+        section.style.display = 'block';
+        section.style.animation = 'none';
+        setTimeout(() => { section.style.animation = ''; }, 10);
+      } else {
+        section.style.display = 'none';
+      }
+    });
+
+    // Scroll to first visible gallery section
+    if (category !== 'all') {
+      const target = document.querySelector('.gallery-section[data-category="' + category + '"]');
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+      }
+    }
+  }
+
+  // ── Lightbox
+  let currentCategory = '';
+  let currentIndex = 0;
+
+  function openLightbox(category, index) {
+    currentCategory = category;
+    currentIndex = index;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    updateLightboxContent();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeLightboxOnBg(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  function navigateLightbox(dir) {
+    const cells = document.querySelectorAll('.gallery-section[data-category="' + currentCategory + '"] .gallery-cell');
+    currentIndex = (currentIndex + dir + cells.length) % cells.length;
+    updateLightboxContent();
+  }
+
+  function updateLightboxContent() {
+    const cells = document.querySelectorAll('.gallery-section[data-category="' + currentCategory + '"] .gallery-cell');
+    const cell = cells[currentIndex];
+    if (!cell) return;
+
+    const title = cell.querySelector('.overlay-title');
+    const cat = cell.querySelector('.overlay-category');
+    const detail = cell.querySelector('.overlay-detail');
+
+    document.getElementById('lightbox-title').textContent = title ? title.textContent : 'Project Photo';
+    document.getElementById('lightbox-meta').textContent =
+      (cat ? cat.textContent + ' — ' : '') + 'SN Yacht Services, South Florida' + (detail ? ' — ' + detail.textContent : '');
+  }
+
+  // Keyboard nav
+  document.addEventListener('keydown', (e) => {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+    if (e.key === 'ArrowRight') navigateLightbox(1);
+  });
+</script>
+
+</body>
+</html>
