@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0112)file:///C:/Users/esteb/Downloads/Project_Gallery___SN_Yacht_Services___Marine_Electronics___Custom_Panels_2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SN Yacht Services project gallery — custom dash panels, electronics installations, switch panels, and more across South Florida.">
+<title>Project Gallery | SN Yacht Services | Marine Electronics &amp; Custom Panels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="file:///C:/Users/esteb/Downloads/Project%20Gallery%20_%20SN%20Yacht%20Services%20_%20Marine%20Electronics%20&amp;%20Custom%20Panels_files/css2" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --off-black: #111214;
+    --dark: #161a1e;
+    --card-bg: #1a1e24;
+    --border: rgba(255,255,255,0.08);
+    --red: #cc1c1c;
+    --red-bright: #e02020;
+    --red-muted: rgba(204,28,28,0.15);
+    --white: #ffffff;
+    --off-white: #f0ede8;
+    --muted: #8a8f96;
+    --light: #c8cdd4;
+    --navy: #0d1520;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 72px;
+    background: rgba(10,10,10,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo svg {
+    height: 38px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--red-bright); }
+
+  .nav-cta {
+    background: var(--red) !important;
+    color: var(--white) !important;
+    padding: 10px 22px;
+  }
+
+  .nav-cta:hover { background: var(--red-bright) !important; }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--navy);
+    padding: 9rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(204,28,28,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 1.2rem;
+  }
+
+  .page-hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--red-bright);
+  }
+
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 1.2rem;
+  }
+
+  .page-hero h1 span { color: var(--red-bright); }
+
+  .page-hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.75;
+  }
+
+  /* ── CAROUSEL SECTION ── */
+  .carousel-section {
+    padding: 5rem 0;
+    background: var(--black);
+  }
+
+  .carousel-wrap {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  /* The track that holds all slides */
+  .carousel-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 0.5px solid var(--border);
+  }
+
+  .carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    pointer-events: none;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Caption overlay */
+  .carousel-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, transparent 100%);
+    padding: 3rem 2.5rem 1.8rem;
+  }
+
+  .carousel-caption-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    margin-bottom: 6px;
+  }
+
+  .carousel-caption-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  /* Progress bar */
+  .carousel-progress {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .carousel-progress-bar {
+    height: 100%;
+    background: var(--red);
+    width: 0%;
+    transition: width linear;
+  }
+
+  /* Prev / Next buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px; height: 52px;
+    background: rgba(10,10,10,0.7);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+    z-index: 10;
+    backdrop-filter: blur(6px);
+  }
+
+  .carousel-btn:hover {
+    background: var(--red);
+    border-color: var(--red);
+  }
+
+  .carousel-btn svg {
+    width: 20px; height: 20px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .carousel-prev { left: 4rem; }
+  .carousel-next { right: 4rem; }
+
+  /* Dot indicators */
+  .carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+  }
+
+  .carousel-dot {
+    width: 6px; height: 6px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+    padding: 0;
+    transform: rotate(45deg);
+  }
+
+  .carousel-dot.active {
+    background: var(--red-bright);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  .carousel-dot:hover { background: rgba(255,255,255,0.5); }
+
+  /* Counter */
+  .carousel-counter {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .carousel-counter span { color: var(--red-bright); }
+
+  /* Pause indicator */
+  .carousel-pause-hint {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(10,10,10,0.6);
+    border: 0.5px solid var(--border);
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .carousel-pause-hint:hover { color: var(--white); }
+
+  .pause-icon, .play-icon { display: none; }
+  .is-paused .pause-icon { display: none; }
+  .is-paused .play-icon { display: inline; }
+  .pause-icon { display: inline; }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(10,10,10,0.97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    padding: 2rem;
+  }
+
+  .lightbox.active { opacity: 1; pointer-events: all; }
+
+  .lightbox-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  .lightbox-img-wrap {
+    width: 100%;
+    max-height: 74vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 74vh;
+    object-fit: contain;
+  }
+
+  .lightbox-caption-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0 0;
+    border-top: 0.5px solid var(--border);
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+
+  .lightbox-caption {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .lightbox-counter {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .lightbox-counter span { color: var(--red-bright); }
+
+  .lb-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px; height: 52px;
+    background: rgba(204,28,28,0.8);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .lb-btn:hover { background: var(--red-bright); }
+
+  .lb-btn svg {
+    width: 20px; height: 20px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .lb-prev { left: -70px; }
+  .lb-next { right: -70px; }
+
+  .lb-close {
+    position: fixed;
+    top: 1.5rem; right: 2rem;
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.06);
+    border: 0.5px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .lb-close:hover { background: var(--red-muted); }
+
+  .lb-close svg {
+    width: 18px; height: 18px;
+    fill: none;
+    stroke: var(--light);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--red);
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .cta-band-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.05;
+  }
+
+  .cta-band-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-top: 0.5rem;
+  }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    padding: 16px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .btn-white:hover { background: var(--off-white); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--off-black);
+    border-top: 0.5px solid var(--border);
+    padding: 4rem 4rem 2rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .footer-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .footer-contact-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--light);
+    margin-bottom: 6px;
+  }
+
+  .footer-contact-line a { color: var(--light); text-decoration: none; }
+  .footer-contact-line a:hover { color: var(--red-bright); }
+
+  .footer-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.6rem; }
+  .footer-links a {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--red-bright); }
+
+  .footer-store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    text-decoration: none;
+    border: 0.5px solid rgba(204,28,28,0.3);
+    padding: 8px 16px;
+    margin-top: 1rem;
+    transition: background 0.2s;
+  }
+
+  .footer-store-link:hover { background: var(--red-muted); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-legal {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--muted);
+  }
+
+  .footer-legal a { color: var(--muted); text-decoration: none; }
+  .footer-legal a:hover { color: var(--red-bright); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .page-hero { padding: 8rem 2rem 4rem; }
+    .carousel-wrap { padding: 0 1.5rem; }
+    .carousel-prev { left: 1.5rem; }
+    .carousel-next { right: 1.5rem; }
+    .cta-band { padding: 3rem 2rem; flex-direction: column; }
+    footer { padding: 3rem 2rem 1.5rem; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .lb-prev { left: -10px; }
+    .lb-next { right: -10px; }
+  }
+
+  @media (max-width: 550px) {
+    .footer-top { grid-template-columns: 1fr; }
+    .carousel-caption-text { font-size: 0.95rem; }
+    .carousel-btn { width: 40px; height: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="file:///C:/" class="nav-logo" aria-label="SN Yacht Services Home">
+    <svg style="display:block;" width="180" height="74" viewBox="0 0 63.035354 25.694525" version="1.1" id="svg5" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="snlogo.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  
+  <defs id="defs2">
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2139">
+      <path d="M 0,360 H 360 V 0 H 0 Z" id="path2137"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2149">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2147"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2181">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2179"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2213">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2211"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2245">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2243"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2277">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2275"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2309">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2307"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2341">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2339"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2373">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2371"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2405">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2403"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2437">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2435"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2469">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2467"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2501">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2499"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2533">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2531"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2565">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2563"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2597">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2595"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2629">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2627"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2661">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2659"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2693">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2691"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2725">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2723"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2757">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2755"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2789">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2787"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2821">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2819"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2853">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2851"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2885">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2883"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2917">
+      <path d="M -103.108,71.3218 H 103.108 V -71.3223 h -206.216 z" id="path2915"></path>
+    </clippath>
+    <clippath clipPathUnits="userSpaceOnUse" id="clipPath2941">
+      <path d="M 0,360 H 360 V 0 H 0 Z" id="path2939"></path>
+    </clippath>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-85.009315,45.575966)">
+    <g id="g2937" clip-path="url(#clipPath2941)" transform="matrix(0.35277777,0,0,-0.35277777,53.027047,30.771343)">
+      <g id="g2943" transform="translate(90.6584,176.2455)">
+        <path d="m 0,0 c 0,0 43.053,15.621 73.125,17.005 0,0 1.551,2.619 4.234,6.642 C 77.359,23.647 44.685,21.926 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2945"></path>
+      </g>
+      <g id="g2947" transform="translate(130.8299,206.2363)">
+        <path d="M 0,0 C 9.967,0.232 15.059,10.135 27.368,7.17 27.367,7.137 23.034,4.844 25.186,1.798 c 1.53,-2.164 4.254,-1.605 6.994,-0.447 2.571,1.086 4.644,2.35 8.001,1.958 l -2.892,-3.725 c -36.478,-5.106 -77.46,-29.045 -77.46,-29.045 0,0 46.328,23.939 79.247,25.828 l 5.36,7.248 c 0,0 -3.261,1.484 -7.556,1.485 -2.148,0 -4.577,-0.57 -6.941,-1.485 -0.461,-0.179 -0.874,-0.257 -1.236,-0.257 -1.459,0 -2.398,1.182 -1.167,2.469 0.7,0.731 2.221,1.196 2.35,1.175 0,0 -7.665,5.987 -22.772,-1.623 -10.85,-5.761 -13.709,2.63 -9.63,4.802 0,0 -1.561,0.066 -3.169,-1.852 C -7.714,5.908 -7.113,0 0,0" style="fill:#ed1c24;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2949"></path>
+      </g>
+      <g id="g2951" transform="translate(123.0907,165.8107)">
+        <path d="m 0,0 3.145,1.821 c 0.828,-1.352 1.903,-2.345 3.807,-2.345 1.6,0 2.621,0.8 2.621,1.903 0,1.325 -1.048,1.793 -2.814,2.566 L 5.793,4.359 C 3.007,5.545 1.159,7.035 1.159,10.18 c 0,2.897 2.207,5.104 5.655,5.104 2.456,0 4.221,-0.856 5.49,-3.09 L 9.297,10.263 c -0.662,1.186 -1.38,1.655 -2.483,1.655 -1.131,0 -1.848,-0.717 -1.848,-1.655 0,-1.159 0.717,-1.628 2.372,-2.346 L 8.304,7.504 c 3.283,-1.407 5.131,-2.841 5.131,-6.069 0,-3.477 -2.731,-5.38 -6.4,-5.38 C 3.449,-3.945 1.131,-2.235 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2953"></path>
+      </g>
+      <g id="g2955" transform="translate(147.8656,170.8317)">
+        <path d="m 0,0 c -0.938,0.883 -2.235,2.565 -2.235,2.565 0,0 0.276,-2.068 0.276,-3.42 v -7.863 h -3.614 v 18.926 h 0.386 L 4.276,1.324 c 0.911,-0.855 2.207,-2.565 2.207,-2.565 0,0 -0.249,2.124 -0.249,3.421 v 7.862 H 9.849 V -8.883 H 9.462 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2957"></path>
+      </g>
+      <g id="g2959" transform="translate(178.9857,168.073)">
+        <path d="m 0,0 -7.117,12.801 h 4.276 L 0.469,6.759 C 1.187,5.435 1.986,3.2 1.986,3.2 c 0,0 0.745,2.207 1.463,3.559 l 3.172,6.042 h 3.945 L 3.89,0.276 V -5.959 H 0 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2961"></path>
+      </g>
+      <g id="g2963" transform="translate(200.9749,167.466)">
+        <path d="m 0,0 -1.352,3.255 c -0.551,1.325 -1.131,3.366 -1.131,3.366 0,0 -0.552,-2.041 -1.103,-3.366 L -4.938,0 Z m -2.593,13.573 h 0.331 L 6.317,-5.352 H 2.262 l -0.883,2.124 h -7.614 l -0.883,-2.124 h -3.724 z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2965"></path>
+      </g>
+      <g id="g2967" transform="translate(210.3006,171.4939)">
+        <path d="m 0,0 c 0,5.545 4.276,9.601 9.656,9.601 3.393,0 5.821,-1.214 7.504,-3.835 L 14.208,3.669 C 13.325,5.104 11.808,6.125 9.656,6.125 6.262,6.125 3.973,3.504 3.973,0 c 0,-3.504 2.289,-6.18 5.683,-6.18 2.427,0 3.779,1.159 4.828,2.759 L 17.491,-5.49 C 15.863,-8.028 13.27,-9.628 9.656,-9.628 4.276,-9.628 0,-5.545 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2969"></path>
+      </g>
+      <g id="g2971" transform="translate(233.4202,180.8737)">
+        <path d="m 0,0 h 3.862 v -9.601 h 8.029 V 0 h 3.862 v -18.76 h -3.862 v 5.711 H 3.862 V -18.76 H 0 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2973"></path>
+      </g>
+      <g id="g2975" transform="translate(260.1273,177.4802)">
+        <path d="M 0,0 H -5.352 V 3.394 H 9.214 V 0 H 3.862 V -15.366 H 0 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2977"></path>
+      </g>
+      <g id="g2979" transform="translate(153.3433,143.5827)">
+        <path d="M 0,0 C -0.379,0 -0.716,0.044 -1.01,0.133 -1.304,0.222 -1.563,0.34 -1.788,0.487 -2.012,0.634 -2.204,0.805 -2.362,0.998 -2.521,1.191 -2.65,1.393 -2.751,1.602 l 0.696,0.371 c 0.094,-0.162 0.2,-0.319 0.32,-0.47 0.12,-0.151 0.259,-0.283 0.418,-0.395 0.158,-0.112 0.344,-0.201 0.557,-0.267 0.212,-0.066 0.458,-0.098 0.737,-0.098 0.232,0 0.446,0.03 0.644,0.092 C 0.818,0.897 0.99,0.986 1.137,1.103 1.284,1.219 1.4,1.36 1.485,1.526 1.57,1.692 1.613,1.88 1.613,2.089 1.613,2.29 1.582,2.468 1.52,2.623 1.458,2.778 1.365,2.919 1.242,3.046 1.118,3.174 0.963,3.294 0.777,3.406 0.592,3.519 0.375,3.629 0.127,3.737 l -0.626,0.29 c -0.279,0.124 -0.526,0.256 -0.743,0.395 -0.216,0.139 -0.399,0.294 -0.546,0.464 -0.147,0.17 -0.259,0.36 -0.336,0.569 -0.078,0.209 -0.116,0.453 -0.116,0.731 0,0.286 0.052,0.545 0.155,0.778 0.103,0.232 0.246,0.431 0.429,0.598 0.183,0.166 0.403,0.293 0.658,0.382 0.255,0.089 0.53,0.134 0.824,0.134 0.534,0 0.971,-0.11 1.311,-0.331 C 1.478,7.526 1.752,7.242 1.961,6.894 L 1.288,6.476 C 1.133,6.724 0.944,6.929 0.719,7.091 0.495,7.254 0.197,7.335 -0.174,7.335 -0.569,7.335 -0.876,7.232 -1.097,7.027 -1.317,6.822 -1.428,6.55 -1.428,6.209 c 0,-0.348 0.099,-0.621 0.297,-0.818 0.198,-0.197 0.518,-0.396 0.961,-0.598 L 0.458,4.503 C 0.784,4.356 1.071,4.203 1.319,4.045 1.568,3.886 1.775,3.712 1.942,3.522 2.109,3.333 2.235,3.12 2.321,2.884 2.406,2.648 2.449,2.383 2.449,2.089 2.449,1.764 2.387,1.472 2.263,1.213 2.139,0.954 1.969,0.735 1.752,0.557 1.536,0.379 1.278,0.242 0.98,0.145 0.683,0.048 0.355,0 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2981"></path>
+      </g>
+      <g id="g2983" transform="translate(163.3013,151.5676)">
+        <path d="m 0,0 h 4.805 v -0.743 h -3.97 v -3.691 h 3.54 V -5.176 H 0.835 V -7.149 H 4.967 V -7.892 H 0 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2985"></path>
+      </g>
+      <g id="g2987" transform="translate(177.565,146.4958)">
+        <path d="M 0,0 C 0.449,0 0.828,0.054 1.138,0.163 1.447,0.271 1.698,0.421 1.892,0.615 2.085,0.809 2.227,1.037 2.315,1.3 2.404,1.563 2.449,1.849 2.449,2.159 2.449,2.468 2.404,2.756 2.315,3.023 2.227,3.291 2.085,3.521 1.892,3.714 1.698,3.907 1.445,4.058 1.132,4.167 0.818,4.275 0.441,4.329 0,4.329 H -0.894 V 0 Z M 3.389,-2.82 H 2.403 L 0.882,-0.673 C 0.611,-0.72 0.333,-0.743 0.046,-0.743 h -0.94 V -2.82 H -1.729 V 5.072 H 0.046 C 0.588,5.072 1.062,5 1.468,4.857 1.875,4.714 2.215,4.513 2.49,4.254 2.764,3.994 2.971,3.687 3.11,3.331 3.25,2.975 3.319,2.584 3.319,2.159 3.319,1.563 3.182,1.044 2.907,0.604 2.633,0.163 2.221,-0.17 1.671,-0.395 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2989"></path>
+      </g>
+      <g id="g2991" transform="translate(187.6739,151.5676)">
+        <path d="m 0,0 h 0.905 l 2.171,-5.35 c 0.039,-0.101 0.077,-0.213 0.116,-0.337 0.038,-0.124 0.077,-0.24 0.116,-0.348 0.031,-0.132 0.066,-0.259 0.105,-0.383 0.03,0.124 0.065,0.251 0.104,0.383 0.031,0.108 0.067,0.224 0.11,0.348 0.042,0.124 0.083,0.236 0.122,0.337 L 5.908,0 H 6.755 L 3.471,-7.973 h -0.14 z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2993"></path>
+      </g>
+      <path d="m 201.775,151.568 h 0.847 v -7.892 h -0.847 z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2995"></path>
+      <g id="g2997" transform="translate(214.2174,143.5827)">
+        <path d="M 0,0 C -0.557,0 -1.083,0.099 -1.579,0.296 -2.074,0.493 -2.503,0.77 -2.867,1.125 -3.23,1.481 -3.519,1.907 -3.731,2.402 -3.944,2.897 -4.05,3.443 -4.05,4.039 c 0,0.596 0.106,1.141 0.319,1.636 0.212,0.495 0.501,0.921 0.864,1.277 0.364,0.356 0.793,0.632 1.288,0.83 0.496,0.197 1.022,0.296 1.579,0.296 1.408,0 2.453,-0.507 3.134,-1.52 L 2.496,6.093 C 2.24,6.472 1.903,6.774 1.486,6.999 1.068,7.223 0.573,7.335 0,7.335 -0.464,7.335 -0.89,7.251 -1.277,7.084 -1.664,6.917 -1.998,6.687 -2.281,6.392 -2.563,6.097 -2.784,5.749 -2.942,5.349 -3.101,4.949 -3.18,4.513 -3.18,4.039 c 0,-0.474 0.079,-0.911 0.238,-1.31 0.158,-0.4 0.379,-0.748 0.661,-1.043 C -1.998,1.391 -1.664,1.16 -1.277,0.993 -0.89,0.826 -0.464,0.743 0,0.743 0.581,0.743 1.087,0.859 1.521,1.091 1.954,1.323 2.313,1.648 2.6,2.066 L 3.25,1.613 C 2.901,1.103 2.451,0.706 1.897,0.423 1.344,0.141 0.712,0 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2999"></path>
+      </g>
+      <g id="g3001" transform="translate(224.8487,151.5676)">
+        <path d="m 0,0 h 4.805 v -0.743 h -3.97 v -3.691 h 3.54 V -5.176 H 0.835 V -7.149 H 4.967 V -7.892 H 0 Z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3003"></path>
+      </g>
+      <g id="g3005" transform="translate(239.3912,143.5827)">
+        <path d="M 0,0 C -0.379,0 -0.716,0.044 -1.01,0.133 -1.304,0.222 -1.563,0.34 -1.788,0.487 -2.012,0.634 -2.204,0.805 -2.362,0.998 -2.521,1.191 -2.65,1.393 -2.751,1.602 l 0.696,0.371 c 0.094,-0.162 0.2,-0.319 0.32,-0.47 0.12,-0.151 0.259,-0.283 0.418,-0.395 0.158,-0.112 0.344,-0.201 0.557,-0.267 0.212,-0.066 0.458,-0.098 0.737,-0.098 0.232,0 0.446,0.03 0.644,0.092 C 0.818,0.897 0.99,0.986 1.137,1.103 1.284,1.219 1.4,1.36 1.485,1.526 1.57,1.692 1.613,1.88 1.613,2.089 1.613,2.29 1.582,2.468 1.52,2.623 1.458,2.778 1.365,2.919 1.242,3.046 1.118,3.174 0.963,3.294 0.777,3.406 0.592,3.519 0.375,3.629 0.127,3.737 l -0.626,0.29 c -0.279,0.124 -0.526,0.256 -0.743,0.395 -0.216,0.139 -0.399,0.294 -0.546,0.464 -0.147,0.17 -0.259,0.36 -0.336,0.569 -0.078,0.209 -0.116,0.453 -0.116,0.731 0,0.286 0.052,0.545 0.155,0.778 0.103,0.232 0.246,0.431 0.429,0.598 0.183,0.166 0.403,0.293 0.658,0.382 0.255,0.089 0.53,0.134 0.824,0.134 0.534,0 0.971,-0.11 1.311,-0.331 C 1.478,7.526 1.752,7.242 1.961,6.894 L 1.288,6.476 C 1.133,6.724 0.944,6.929 0.719,7.091 0.495,7.254 0.197,7.335 -0.174,7.335 -0.569,7.335 -0.876,7.232 -1.097,7.027 -1.317,6.822 -1.428,6.55 -1.428,6.209 c 0,-0.348 0.099,-0.621 0.297,-0.818 0.198,-0.197 0.518,-0.396 0.961,-0.598 L 0.458,4.503 C 0.784,4.356 1.071,4.203 1.319,4.045 1.568,3.886 1.775,3.712 1.942,3.522 2.109,3.333 2.235,3.12 2.321,2.884 2.406,2.648 2.449,2.383 2.449,2.089 2.449,1.764 2.387,1.472 2.263,1.213 2.139,0.954 1.969,0.735 1.752,0.557 1.536,0.379 1.278,0.242 0.98,0.145 0.683,0.048 0.355,0 0,0" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3007"></path>
+      </g>
+      <g id="g3009" transform="translate(202.9964,155.6497)">
+        <path d="m 0,0 h -0.189 v -1.03 c 0,-0.335 -0.271,-0.606 -0.605,-0.606 h -0.012 c -0.335,0 -0.606,0.271 -0.606,0.606 V 0 h -0.189 l -0.8,-1.386 0.8,-1.386 H 0 l 0.8,1.386 z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3011"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="file:///C:/services">Services</a></li>
+    <li><a href="file:///C:/gallery" class="active">Gallery</a></li>
+    <li><a href="file:///C:/brands">Brands</a></li>
+    <li><a href="file:///C:/about">About</a></li>
+    <li><a href="file:///C:/contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-eyebrow">Our Work</div>
+  <h1>Project <span>Gallery</span></h1>
+  <p class="page-hero-sub">Every installation is custom. Browse real projects we've completed across South Florida — from full dash fabrications to custom switch panels and complete electronics packages.</p>
+</section>
+
+<!-- ── CAROUSEL ── -->
+<section class="carousel-section">
+  <div class="carousel-wrap">
+
+    <div class="carousel-stage" id="carouselStage">
+
+      <!-- Slide 1 -->
+      <div class="carousel-slide" data-index="0">
+        <img src="file:///C:/Users/esteb/Downloads/images/D22AB157-D9B3-4377-88BC-E4A3C95735D6.PNG" alt="33 Albury Brothers Custom Dash Panel">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 01 / 15</div>
+          <div class="carousel-caption-text">33' Albury Brothers — Custom Dash Panel with Bluewater Switches and Autopilot Display</div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide" data-index="1">
+        <img src="file:///C:/Users/esteb/Downloads/images/FA917E85-5F35-4B63-80B9-385487D2BAE0.PNG" alt="27 Pro-Line Custom Dash Panel with Backlit Logo">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 02 / 15</div>
+          <div class="carousel-caption-text">27' Pro-Line — Custom Dash Panel with Backlit Logo</div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide active" data-index="2">
+        <img src="file:///C:/Users/esteb/Downloads/images/cobia_backlit_dash.png" alt="32 Cobia SN Yacht Products Switches">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 03 / 15</div>
+          <div class="carousel-caption-text">32' Cobia — SN Yacht Products Push Button Switches, Backlit Labels and Logo</div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-slide" data-index="3">
+        <img src="file:///C:/Users/esteb/Downloads/images/IMG_3542.jpg" alt="32 Edgewater Custom Inlay with Garmin Electronics">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 04 / 15</div>
+          <div class="carousel-caption-text">32' Edgewater — Custom Inlay with Garmin Electronics</div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel-slide" data-index="4">
+        <img src="file:///C:/Users/esteb/Downloads/images/IMG_19162.jpg" alt="36 Cobia SN Yacht Products Push Button Switches">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 05 / 15</div>
+          <div class="carousel-caption-text">36' Cobia — SN Yacht Products Push Button Switches</div>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="carousel-slide" data-index="5">
+        <img src="file:///C:/Users/esteb/Downloads/images/IMG_4188.jpg" alt="36 Cobia Matte Black Acrylic SN Yacht Products Switches">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 06 / 15</div>
+          <div class="carousel-caption-text">36' Cobia — Matte Black Acrylic with SN Yacht Products Push Button Switches</div>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="carousel-slide" data-index="6">
+        <img src="file:///C:/Users/esteb/Downloads/images/IMG_2352.jpg" alt="36 Regulator Backlit Switch Labels Satin Finish">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 07 / 15</div>
+          <div class="carousel-caption-text">36' Regulator — Backlit Switch Labels, Satin Finish</div>
+        </div>
+      </div>
+
+      <!-- Slide 8 -->
+      <div class="carousel-slide" data-index="7">
+        <img src="file:///C:/Users/esteb/Downloads/images/20210429_121637_-_Copy.jpg" alt="61 Viking Triple Garmin Displays Full Electronics Package">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 08 / 15</div>
+          <div class="carousel-caption-text">61' Viking — Triple Garmin Displays, Full Electronics Package</div>
+        </div>
+      </div>
+
+      <!-- Slide 9 -->
+      <div class="carousel-slide" data-index="8">
+        <img src="file:///C:/Users/esteb/Downloads/images/mako_switch_panel.png" alt="Mako Laser Etched Backlit Rocker Switches">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 09 / 15</div>
+          <div class="carousel-caption-text">Mako — Fully Wired Custom Switch Panel with Laser Etched Backlit Rocker Switches</div>
+        </div>
+      </div>
+
+      <!-- Slide 10 -->
+      <div class="carousel-slide" data-index="9">
+        <img src="file:///C:/Users/esteb/Downloads/images/36_Scout.jpg" alt="36 Scout Backlit Logo Air Conditioning Integration">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 10 / 15</div>
+          <div class="carousel-caption-text">36' Scout — Backlit Logo, Air Conditioning Integration</div>
+        </div>
+      </div>
+
+      <!-- Slide 11 -->
+      <div class="carousel-slide" data-index="10">
+        <img src="file:///C:/Users/esteb/Downloads/images/PhotoRoom-20231122_144924.png" alt="Cobia Fully Wired Backlit Switch Panel">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 11 / 15</div>
+          <div class="carousel-caption-text">Cobia — Fully Wired Backlit Switch Panel with SN Yacht Products Switches</div>
+        </div>
+      </div>
+
+      <!-- Slide 12 -->
+      <div class="carousel-slide" data-index="11">
+        <img src="file:///C:/Users/esteb/Downloads/images/20211116_153547.jpg" alt="30 Contender Furuno Electronics Package Gloss Black Panel">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 12 / 15</div>
+          <div class="carousel-caption-text">30' Contender — Furuno Electronics Package, Gloss Black Panel</div>
+        </div>
+      </div>
+
+      <!-- Slide 13 -->
+      <div class="carousel-slide" data-index="12">
+        <img src="file:///C:/Users/esteb/Downloads/images/20220308_100006.jpg" alt="31 Tiara Custom Electronics Powder Coated Matte Black">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 13 / 15</div>
+          <div class="carousel-caption-text">31' Tiara — Custom Electronics, Powder Coated Matte Black Panel</div>
+        </div>
+      </div>
+
+      <!-- Slide 14 -->
+      <div class="carousel-slide" data-index="13">
+        <img src="file:///C:/Users/esteb/Downloads/images/20200424_153433.jpg" alt="30 Formula Custom Dash Panel Analog Gauges Raymarine Axiom">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 14 / 15</div>
+          <div class="carousel-caption-text">30' Formula — Custom Dash Panel with Analog Gauges and Raymarine Axiom</div>
+        </div>
+      </div>
+
+      <!-- Slide 15 -->
+      <div class="carousel-slide" data-index="14">
+        <img src="file:///C:/Users/esteb/Downloads/images/IMG_5323.jpg" alt="Pathfinder Matte Black Switch Panel Backlit Labels">
+        <div class="carousel-caption">
+          <div class="carousel-caption-num">Project 15 / 15</div>
+          <div class="carousel-caption-text">Pathfinder — Matte Black Switch Panel, Backlit Labels and Logo, SN Yacht Products Switches</div>
+        </div>
+      </div>
+
+      <!-- Prev / Next -->
+      <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Previous project">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Next project">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <!-- Pause / Play -->
+      <button class="carousel-pause-hint" id="pauseBtn" aria-label="Pause slideshow">
+        <span class="pause-icon">⏸ Pause</span>
+        <span class="play-icon">▶ Play</span>
+      </button>
+
+      <!-- Progress bar -->
+      <div class="carousel-progress">
+        <div class="carousel-progress-bar" id="progressBar" style="transition: width 5000ms linear; width: 100%;"></div>
+      </div>
+
+    </div><!-- /carousel-stage -->
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide selector"><button class="carousel-dot" role="tab" aria-label="Project 1"></button><button class="carousel-dot" role="tab" aria-label="Project 2"></button><button class="carousel-dot active" role="tab" aria-label="Project 3"></button><button class="carousel-dot" role="tab" aria-label="Project 4"></button><button class="carousel-dot" role="tab" aria-label="Project 5"></button><button class="carousel-dot" role="tab" aria-label="Project 6"></button><button class="carousel-dot" role="tab" aria-label="Project 7"></button><button class="carousel-dot" role="tab" aria-label="Project 8"></button><button class="carousel-dot" role="tab" aria-label="Project 9"></button><button class="carousel-dot" role="tab" aria-label="Project 10"></button><button class="carousel-dot" role="tab" aria-label="Project 11"></button><button class="carousel-dot" role="tab" aria-label="Project 12"></button><button class="carousel-dot" role="tab" aria-label="Project 13"></button><button class="carousel-dot" role="tab" aria-label="Project 14"></button><button class="carousel-dot" role="tab" aria-label="Project 15"></button><button class="carousel-dot active" role="tab" aria-label="Project 1"></button><button class="carousel-dot" role="tab" aria-label="Project 2"></button><button class="carousel-dot" role="tab" aria-label="Project 3"></button><button class="carousel-dot" role="tab" aria-label="Project 4"></button><button class="carousel-dot" role="tab" aria-label="Project 5"></button><button class="carousel-dot" role="tab" aria-label="Project 6"></button><button class="carousel-dot" role="tab" aria-label="Project 7"></button><button class="carousel-dot" role="tab" aria-label="Project 8"></button><button class="carousel-dot" role="tab" aria-label="Project 9"></button><button class="carousel-dot" role="tab" aria-label="Project 10"></button><button class="carousel-dot" role="tab" aria-label="Project 11"></button><button class="carousel-dot" role="tab" aria-label="Project 12"></button><button class="carousel-dot" role="tab" aria-label="Project 13"></button><button class="carousel-dot" role="tab" aria-label="Project 14"></button><button class="carousel-dot" role="tab" aria-label="Project 15"></button></div>
+
+    <!-- Counter -->
+    <div class="carousel-counter"><span id="counterCurrent">3</span> / 15</div>
+
+  </div>
+</section>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <div class="lightbox-inner">
+    <div class="lightbox-img-wrap">
+      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <img id="lbImg" src="./index_files/index_3.html" alt="">
+      <button class="lb-btn lb-next" id="lbNext" aria-label="Next">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+    <div class="lightbox-caption-bar">
+      <div class="lightbox-caption" id="lbCaption"></div>
+      <div class="lightbox-counter"><span id="lbCurrent">1</span> / 15</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA BAND ── -->
+<div class="cta-band">
+  <div>
+    <div class="cta-band-title">Ready to Upgrade Your Helm?</div>
+    <div class="cta-band-sub">Get a free consultation and quote for your custom electronics package.</div>
+  </div>
+  <a href="file:///C:/contact" class="btn-white">Get a Free Quote →</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="footer-tagline">Tailored Tech, Precision Crafted</p>
+      <div class="footer-contact-line"><span>📍</span><span>130 NW 20th St, Boca Raton, FL 33431</span></div>
+      <div class="footer-contact-line"><span>📞</span><a href="tel:7543330479">(754) 333-0479</a></div>
+      <a href="https://www.snyacht.com/" target="_blank" rel="noopener" class="footer-store-link">Shop SN Yacht Products →</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="file:///C:/services/custom-panels">Custom Dash Panels</a></li>
+        <li><a href="file:///C:/services/electronics">Electronics Installation</a></li>
+        <li><a href="file:///C:/services/audio">Marine Audio</a></li>
+        <li><a href="file:///C:/services/navigation">Autopilot &amp; Navigation</a></li>
+        <li><a href="file:///C:/services/electrical">Electrical Repair</a></li>
+        <li><a href="file:///C:/services/mobile">Mobile Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="file:///C:/about">About Us</a></li>
+        <li><a href="file:///C:/gallery">Project Gallery</a></li>
+        <li><a href="file:///C:/brands">Brands We Carry</a></li>
+        <li><a href="file:///C:/blog">Resources &amp; Blog</a></li>
+        <li><a href="file:///C:/#reviews">Customer Reviews</a></li>
+        <li><a href="file:///C:/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="file:///C:/service-area/boca-raton">Boca Raton</a></li>
+        <li><a href="file:///C:/service-area/fort-lauderdale">Fort Lauderdale</a></li>
+        <li><a href="file:///C:/service-area/miami">Miami</a></li>
+        <li><a href="file:///C:/service-area/palm-beach">Palm Beach</a></li>
+        <li><a href="file:///C:/service-area/deerfield-beach">Deerfield Beach</a></li>
+        <li><a href="file:///C:/service-area/pompano-beach">Pompano Beach</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">© 2026 SN Yacht Services, LLC. All rights reserved. | <a href="file:///C:/privacy">Privacy Policy</a> | <a href="file:///C:/terms">Terms</a></p>
+    <p class="footer-legal">Marine electronics installation &amp; custom panel fabrication — Boca Raton, South Florida</p>
+  </div>
+</footer>
+
+<script>
+  const TOTAL = 15;
+  const INTERVAL = 5000; // ms per slide
+  const TRANSITION = 700; // ms fade
+
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dotsWrap = document.getElementById('carouselDots');
+  const progressBar = document.getElementById('progressBar');
+  const counterCurrent = document.getElementById('counterCurrent');
+  const pauseBtn = document.getElementById('pauseBtn');
+
+  let current = 0;
+  let paused = false;
+  let timer = null;
+  let progressTimer = null;
+  let progressStart = null;
+
+  // Build dots
+  for (let i = 0; i < TOTAL; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', `Project ${i + 1}`);
+    dot.addEventListener('click', () => { goTo(i); resetProgress(); });
+    dotsWrap.appendChild(dot);
+  }
+
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + TOTAL) % TOTAL;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    counterCurrent.textContent = current + 1;
+  }
+
+  // Progress bar
+  function startProgress() {
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    // Force reflow
+    void progressBar.offsetWidth;
+    progressBar.style.transition = `width ${INTERVAL}ms linear`;
+    progressBar.style.width = '100%';
+  }
+
+  function resetProgress() {
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    void progressBar.offsetWidth;
+    if (!paused) startProgress();
+  }
+
+  // Auto-advance
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      if (!paused) {
+        goTo(current + 1);
+        startProgress();
+      }
+    }, INTERVAL);
+  }
+
+  // Pause / Play
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    pauseBtn.classList.toggle('is-paused', paused);
+    if (paused) {
+      progressBar.style.transition = 'none';
+      const computed = parseFloat(getComputedStyle(progressBar).width);
+      const stageWidth = progressBar.parentElement.offsetWidth;
+      progressBar.style.width = (computed / stageWidth * 100) + '%';
+    } else {
+      startProgress();
+    }
+  });
+
+  // Prev / Next
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    goTo(current - 1);
+    resetProgress();
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    goTo(current + 1);
+    resetProgress();
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') { goTo(current - 1); resetProgress(); }
+    if (e.key === 'ArrowRight') { goTo(current + 1); resetProgress(); }
+    if (e.key === ' ') { e.preventDefault(); pauseBtn.click(); }
+  });
+
+  // Touch swipe on carousel
+  const stage = document.getElementById('carouselStage');
+  let touchX = 0;
+  stage.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      diff > 0 ? goTo(current + 1) : goTo(current - 1);
+      resetProgress();
+    }
+  });
+
+  // Click slide to open lightbox
+  slides.forEach((slide, i) => {
+    slide.addEventListener('click', e => {
+      if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-pause-hint')) return;
+      openLightbox(i);
+    });
+  });
+
+  // Pause on hover
+  stage.addEventListener('mouseenter', () => {
+    if (!paused) {
+      progressBar.style.transition = 'none';
+      const computed = parseFloat(getComputedStyle(progressBar).width);
+      const stageWidth = progressBar.parentElement.offsetWidth;
+      progressBar.style.width = (computed / stageWidth * 100) + '%';
+    }
+  });
+
+  stage.addEventListener('mouseleave', () => {
+    if (!paused) startProgress();
+  });
+
+  // ── LIGHTBOX ──
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbCurrentEl = document.getElementById('lbCurrent');
+
+  function openLightbox(index) {
+    current = index;
+    updateLightbox();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function updateLightbox() {
+    const slide = slides[current];
+    lbImg.src = slide.querySelector('img').src;
+    lbImg.alt = slide.querySelector('img').alt;
+    lbCaption.textContent = slide.querySelector('.carousel-caption-text').textContent;
+    lbCurrentEl.textContent = current + 1;
+  }
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', () => { current = (current - 1 + TOTAL) % TOTAL; updateLightbox(); });
+  document.getElementById('lbNext').addEventListener('click', () => { current = (current + 1) % TOTAL; updateLightbox(); });
+
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') { current = (current - 1 + TOTAL) % TOTAL; updateLightbox(); }
+    if (e.key === 'ArrowRight') { current = (current + 1) % TOTAL; updateLightbox(); }
+  });
+
+  let lbTouchX = 0;
+  lightbox.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', e => {
+    const diff = lbTouchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      current = diff > 0
+        ? (current + 1) % TOTAL
+        : (current - 1 + TOTAL) % TOTAL;
+      updateLightbox();
+    }
+  });
+
+  // ── Start everything ──
+  startTimer();
+  startProgress();
+</script>
+
+
+
+</body></html>
